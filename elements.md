@@ -1,7 +1,7 @@
 
 <div dir='rtl' lang='he'>
 
-# כותרת ראשית: window cleaner 
+# window cleaner 
 
 
 ### "לפעמים כל מה שצריך כדי לראות נוף חדש זה לשנות זווית ראיה"
