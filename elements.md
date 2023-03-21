@@ -14,7 +14,7 @@
 
 
 
----
+![our game pic](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/d8d3f2bf7b9ad75a39bcba85d19538fb694ac9e9/clean%20our.png)
 
 
 ## רכיבים רשמיים
@@ -92,7 +92,7 @@
 
 
 ## Glass Clean 3D - Deep Clean
- ![pic1](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/2da86dff6eefd7676ed4bf91aaa0430226a4c72c/clean.png)
+![pic1](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/2da86dff6eefd7676ed4bf91aaa0430226a4c72c/clean.png)
 ### key word : glass clean 
 ### https://play.google.com/store/apps/details?id=com.funspace.glassclean
 
@@ -102,6 +102,7 @@
 
 
 ## Building Cleaner
+![pic2](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/d8d3f2bf7b9ad75a39bcba85d19538fb694ac9e9/clean%20bulding.png)
 ### keyword : Building Cleaner
 ### https://play.google.com/store/apps/details?id=com.pinnacle.buildingcleaner
 
@@ -111,6 +112,7 @@
 
 
 ## glass clean 
+![pic3](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/main/build%20clean.png)
 ### keyword : glass building clean
 ### https://play.google.com/store/apps/details?id=com.jy.game.glassclean
 
