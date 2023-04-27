@@ -10,3 +10,7 @@
 #### [שחקו במשחק](https://tommy-bar.itch.io/windows-cleaner)
 ![pic1](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/72eb528de7616c71b18d3ed0c96850611fae569e/Assets/Pics/Capture.PNG)
 ![pic2](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/72eb528de7616c71b18d3ed0c96850611fae569e/Assets/Pics/Capture2.PNG)
+#### הכנו prefabs של שחקן וחלונות, לשחקן יש את היכולת לזוז ימינה שמאלה ולמעלה למטה באמצעות סקריפט תזוזה, והוא מחזיק בידו ספוג ומגב
+#### בתחילת המשחק רכיב ההצגה של הספוג והמגב כבוי ומשתנה בהתאם לקלט מהמשתמש
+#### לחלונות הוספנו גם תמונה של בוץ, וגם תמונה המדמה קצף
+#### בתחילת המשחק החלונות מלאים בבוץ ובהמשך מלאים בסבון, ועל השחקן לנקות את החלונות לגמרי באמצעות הכלים העומדים לרשותו
