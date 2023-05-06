@@ -9,7 +9,7 @@ public class break_player_trigger : MonoBehaviour
     float x_pos;
     float left_lim = -2.2f;
     float right_lim = 2.5f;
-    float buttom_lim = -4.25f;
+    float buttom_lim = -3f;
     float top_lim = 5f;
     Vector3 new_pos;
     // Start is called before the first frame update

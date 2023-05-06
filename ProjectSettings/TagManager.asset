@@ -12,6 +12,14 @@ TagManager:
   - left
   - bottom
   - top
+  - cable
+  - floor
+  - station
+  - chair
+  - st
+  - Roof
+  - coin
+  - bag
   layers:
   - Default
   - TransparentFX
