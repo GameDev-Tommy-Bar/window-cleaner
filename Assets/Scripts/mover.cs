@@ -84,7 +84,6 @@ public class mover : MonoBehaviour
     void PlayerMover()
     {
         moveX = Input.GetAxis("Horizontal");
-        moveY = Input.GetAxis("Vertical"); 
 
         if (moveX < 0.0f && faceRight == false)
         {

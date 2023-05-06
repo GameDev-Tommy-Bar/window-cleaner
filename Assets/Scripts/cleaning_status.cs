@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using System;
+
 
 public class cleaning_status : MonoBehaviour
 {
     [SerializeField] GameObject mud;
     [SerializeField] GameObject bubbles;
     [SerializeField] GameObject coin;
+    public TMP_Text scoreText;
     bool is_mud = true;
     bool is_bubbled = false;
 
@@ -36,9 +40,12 @@ public class cleaning_status : MonoBehaviour
             is_bubbled = false;
             coin.GetComponent<SpriteRenderer>().enabled = true;
         }
-        if(other.tag == "bag" ) {
+        if(other.tag == "bag" && coin.GetComponent<SpriteRenderer>().enabled == true ) {
             coin.GetComponent<SpriteRenderer>().enabled = false;
-
+            int score = Int32.Parse(scoreText.text);
+            score += 1;
+            scoreText.text = score.ToString();
     }
+
 }
 }
