@@ -2023,7 +2023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232626327061590082, guid: 256515a4609471a4684139ac4ecb117c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.84
+      value: 7.479235
       objectReference: {fileID: 0}
     - target: {fileID: 232626327061590082, guid: 256515a4609471a4684139ac4ecb117c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2031,7 +2031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232626327061590082, guid: 256515a4609471a4684139ac4ecb117c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.65
+      value: 5.4695
       objectReference: {fileID: 0}
     - target: {fileID: 232626327061590082, guid: 256515a4609471a4684139ac4ecb117c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2347,8 +2347,8 @@ MonoBehaviour:
   onBuilding: 0
   cable1: {fileID: 1635739402}
   cable2: {fileID: 1904524950}
-  cable1_freezeY: {x: -3.9448051, y: 5.65, z: -2}
-  cable2_freezeY: {x: -2.9648051, y: 5.65, z: -2}
+  cable1_freezeY: 0
+  cable2_freezeY: 0
 --- !u!50 &1769361098
 Rigidbody2D:
   serializedVersion: 4
@@ -2688,7 +2688,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232626327061590082, guid: 256515a4609471a4684139ac4ecb117c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.84
+      value: 7.479235
       objectReference: {fileID: 0}
     - target: {fileID: 232626327061590082, guid: 256515a4609471a4684139ac4ecb117c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2696,7 +2696,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 232626327061590082, guid: 256515a4609471a4684139ac4ecb117c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.65
+      value: 5.4695
       objectReference: {fileID: 0}
     - target: {fileID: 232626327061590082, guid: 256515a4609471a4684139ac4ecb117c, type: 3}
       propertyPath: m_LocalPosition.z

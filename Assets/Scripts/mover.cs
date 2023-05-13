@@ -20,8 +20,8 @@ public class mover : MonoBehaviour
     public bool onBuilding = false;
     [SerializeField] GameObject cable1;
     [SerializeField] GameObject cable2;
-    [SerializeField] Vector3 cable1_freezeY;
-    [SerializeField] Vector3 cable2_freezeY;
+    [SerializeField] float cable1_freezeY;
+    [SerializeField] float cable2_freezeY;
     // Start is called before the first frame update
     void Start()
     {
@@ -120,11 +120,11 @@ public class mover : MonoBehaviour
         {
             FlipPlayer();
         }
-        // if(moveY != 0){
-        //     cable1.transform.position = cable1_freezeY;
-        //     cable2.transform.position = cable2_freezeY;
-        // }
-        
+        if(moveY != 0){
+            cable1.transform.position = new Vector3(cable1.transform.position.x, cable1_freezeY,cable1.transform.position.z);
+            cable2.transform.position = new Vector3(cable2.transform.position.x, cable2_freezeY,cable2.transform.position.z);
+        }
+         
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
             moveX * speed,
             moveY * speed);
