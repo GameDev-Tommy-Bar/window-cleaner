@@ -11,6 +11,7 @@ public class cleaning_status : MonoBehaviour
     [SerializeField] GameObject mud;
     [SerializeField] GameObject bubbles;
     [SerializeField] GameObject coin;
+    [SerializeField] GameObject building;
     [SerializeField] float time_between_dirt;
     public TMP_Text scoreText;
     bool is_mud = true;
@@ -61,7 +62,8 @@ public class cleaning_status : MonoBehaviour
 }
     IEnumerator MakeDirtyAgain()
     {
-        yield return new WaitForSeconds(time_between_dirt);
+        float time = building.GetComponent<timer>().get_time();
+        yield return new WaitForSeconds(time);
         mud.GetComponent<SpriteRenderer>().enabled = true;
         is_mud = true;
         is_bubbled = false;
