@@ -5,14 +5,17 @@ using TMPro;
 using System;
 
 
+
 public class cleaning_status : MonoBehaviour
 {
     [SerializeField] GameObject mud;
     [SerializeField] GameObject bubbles;
     [SerializeField] GameObject coin;
+    [SerializeField] float time_between_dirt;
     public TMP_Text scoreText;
     bool is_mud = true;
     bool is_bubbled = false;
+    bool dirty = true;
 
     
     // Start is called before the first frame update
@@ -33,6 +36,7 @@ public class cleaning_status : MonoBehaviour
             bubbles.GetComponent<SpriteRenderer>().enabled = true;
             is_mud = false;
             is_bubbled = true;
+            dirty = true;
         }
         if(other.tag == "mop" && is_bubbled){
             bubbles.GetComponent<SpriteRenderer>().enabled = false;
@@ -45,7 +49,22 @@ public class cleaning_status : MonoBehaviour
             int score = Int32.Parse(scoreText.text);
             score += 1;
             scoreText.text = score.ToString();
+            dirty = false;
+             if (!dirty) 
+            {
+                StartCoroutine(MakeDirtyAgain());
+            }
+            
     }
+    
 
 }
+    IEnumerator MakeDirtyAgain()
+    {
+        yield return new WaitForSeconds(time_between_dirt);
+        mud.GetComponent<SpriteRenderer>().enabled = true;
+        is_mud = true;
+        is_bubbled = false;
+        dirty = true;
+    }
 }
