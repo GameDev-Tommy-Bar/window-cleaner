@@ -34,20 +34,16 @@ public class mover : MonoBehaviour
         
     }
     private void OnTriggerEnter2D(Collider2D other) {
+       Debug.Log("triggered" + other.tag);
         if(other.tag == "cable"){
             isTouchingGround = false;
-            transform.position = new Vector3(-2.16f,-2.43f,-0.36f);
+            //transform.position = new Vector3(-2.16f,-2.43f,-0.36f);
             other.transform.parent = transform;
             gameObject.GetComponent<Animator>().enabled = false;
             hat.GetComponent<SpriteRenderer>().enabled = true;
             onBuilding = true;
         }
 
-        // if (other.CompareTag("Roof"))
-        // {
-        //     Debug.Log("touced");
-        //     gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, 0f);
-        // }
         
 
     }
@@ -58,7 +54,7 @@ public class mover : MonoBehaviour
     {
         Debug.Log("rooooooooof");
         // Set the y-axis velocity to 0 to prevent upward movement
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, 0f);
+       // gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, 0f);
     }
 }
 
