@@ -2347,8 +2347,8 @@ MonoBehaviour:
   onBuilding: 0
   cable1: {fileID: 1635739402}
   cable2: {fileID: 1904524950}
-  cable1_freezeY: 0
-  cable2_freezeY: 0
+  cable1_freezeY: 0.2
+  cable2_freezeY: 0.2
 --- !u!50 &1769361098
 Rigidbody2D:
   serializedVersion: 4
@@ -2807,7 +2807,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2082972377}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
