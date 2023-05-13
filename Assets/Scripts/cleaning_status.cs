@@ -12,7 +12,6 @@ public class cleaning_status : MonoBehaviour
     [SerializeField] GameObject bubbles;
     [SerializeField] GameObject coin;
     [SerializeField] GameObject building;
-    [SerializeField] float time_between_dirt;
     public TMP_Text scoreText;
     bool is_mud = true;
     bool is_bubbled = false;

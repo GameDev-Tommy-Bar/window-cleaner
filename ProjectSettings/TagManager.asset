@@ -20,6 +20,7 @@ TagManager:
   - Roof
   - coin
   - bag
+  - dropper
   layers:
   - Default
   - TransparentFX

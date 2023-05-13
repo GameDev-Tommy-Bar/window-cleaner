@@ -8,6 +8,8 @@ public class mover : MonoBehaviour
     Vector3 pos_right_left;
     //[SerializeField] GameObject cable_colliders;
     [SerializeField] GameObject cables;
+    [SerializeField]Vector3 playerPosOnBuilding;
+    [SerializeField] GameObject drop_player;
     [SerializeField] float speed = 3f;
     public bool faceRight = true;
     public GameObject hat;
@@ -15,8 +17,11 @@ public class mover : MonoBehaviour
     public float moveY;
     Collider2D t;
     private bool isTouchingGround = true;
-    private bool onBuilding = false;
-
+    public bool onBuilding = false;
+    [SerializeField] GameObject cable1;
+    [SerializeField] GameObject cable2;
+    [SerializeField] Vector3 cable1_freezeY;
+    [SerializeField] Vector3 cable2_freezeY;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,10 +43,14 @@ public class mover : MonoBehaviour
         if(other.tag == "cable"){
             isTouchingGround = false;
             //transform.position = new Vector3(-2.16f,-2.43f,-0.36f);
-            other.transform.parent = transform;
+            //other.transform.parent = transform;
             gameObject.GetComponent<Animator>().enabled = false;
             hat.GetComponent<SpriteRenderer>().enabled = true;
             onBuilding = true;
+            cables.GetComponent<player_follower>().following = true;
+            transform.position = playerPosOnBuilding;
+            drop_player.GetComponent<CircleCollider2D>().enabled = true;
+
         }
 
         
@@ -101,9 +110,8 @@ public class mover : MonoBehaviour
     }
 
     void moveOnBuilding(){
-         moveX = Input.GetAxis("Horizontal");
+        moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
-
         if (moveX < 0.0f && faceRight == false)
         {
             FlipPlayer();
@@ -112,11 +120,17 @@ public class mover : MonoBehaviour
         {
             FlipPlayer();
         }
-
+        // if(moveY != 0){
+        //     cable1.transform.position = cable1_freezeY;
+        //     cable2.transform.position = cable2_freezeY;
+        // }
+        
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
             moveX * speed,
             moveY * speed);
     
     }
+
+
 
 }
