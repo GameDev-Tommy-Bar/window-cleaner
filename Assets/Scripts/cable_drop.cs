@@ -9,6 +9,7 @@ public class cable_drop : MonoBehaviour
     [SerializeField] Vector3 player_origin_pos;
     [SerializeField] GameObject player; 
     [SerializeField] GameObject cables;
+    [SerializeField] GameObject hat;
     void Start()
     {
         
@@ -26,6 +27,7 @@ public class cable_drop : MonoBehaviour
             transform.GetComponent<CircleCollider2D>().enabled = false;
             player.transform.position = player_origin_pos;
             player.GetComponent<mover>().onBuilding = false;
+            hat.GetComponent<SpriteRenderer>().enabled = false; 
 
         }
     }
