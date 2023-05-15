@@ -83,6 +83,7 @@ public class mover : MonoBehaviour
                 tutorial_manage.GetComponent<tutorial>().move_start = false;
                 tutorial_manage.GetComponent<tutorial>().cable_touch = true;
                 first_time = false;
+                Debug.Log("fisrt_time "+first_time);
             }
             //tutorial_manage.GetComponent<tutorial>().cable_touch = false;
         }

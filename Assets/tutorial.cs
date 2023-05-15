@@ -10,6 +10,8 @@ using TMPro;
 public class tutorial : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject cables;
+    public GameObject cable_drop;
     public GameObject health_bar;
     public GameObject background;
     public GameObject cable_drop_arrow;
@@ -27,7 +29,7 @@ public class tutorial : MonoBehaviour
     void Start()
     {
         tutorial_text.text = open_text;
-        StartCoroutine(first_hint_change());
+        StartCoroutine(first_hint_change());    
     }
 
     // Update is called once per frame
@@ -42,6 +44,7 @@ public class tutorial : MonoBehaviour
             
         }
         if(drop_cable_touch){
+            drop_cable_touch = false;
             cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = false;
             tutorial_text.text = "GOOD LUCK!";
             StartCoroutine(empty_text());        }
@@ -50,32 +53,30 @@ public class tutorial : MonoBehaviour
     }
     IEnumerator first_hint_change(){
         yield return new WaitForSeconds(4f);
+        cables.SetActive(true);
         cables_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = first_hint;
+
     }
 
     IEnumerator change_to_bar_hint(){
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(10f);
         tutorial_text.text = patienc_bar;
         bar_arrow.GetComponent<SpriteRenderer>().enabled = true;
         StartCoroutine(change_to_drop_cable_hint());
     }
     IEnumerator change_to_drop_cable_hint(){
         yield return new WaitForSeconds(8f);
+        //cable_drop.GetComponent<CircleCollider2D>().enabled = true;
         bar_arrow.GetComponent<SpriteRenderer>().enabled = false;
         cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = drop_cable;
-    }
-    IEnumerator good_luck(){
-        yield return new WaitForSeconds(1f);
-        cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = false;
-        tutorial_text.text = "GOOD LUCK!";
-        StartCoroutine(empty_text());
+        cable_drop.SetActive(true);
     }
     IEnumerator empty_text(){
         yield return new WaitForSeconds(4f);
         background.GetComponent<SpriteRenderer>().enabled = false;
-        tutorial_text.text = "";
+        tutorial_text.text = " ";
         float max_val = health_bar.GetComponent<p_bar>().getMaxValue();
         health_bar.GetComponent<p_bar>().increaseBar(max_val);
     }
