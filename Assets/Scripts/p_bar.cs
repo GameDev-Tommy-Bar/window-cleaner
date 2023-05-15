@@ -12,12 +12,19 @@ public class p_bar : MonoBehaviour
     public void UpdatePBar(float decrease_factor)
     {
         slider.value -= decrease_factor;
-        Debug.Log("bar level is " + slider.value);
+        Debug.Log("after decrease, bar level is " + slider.value);
     }
 
     public float getMaxValue()
     {
         return slider.maxValue;
+    }
+
+    public void increaseBar(float increase_factor)
+    {
+        slider.value += increase_factor;
+        Debug.Log("after increase, bar level is " + slider.value);
+
     }
 
     // Start is called before the first frame update

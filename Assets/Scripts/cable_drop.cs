@@ -23,6 +23,9 @@ public class cable_drop : MonoBehaviour
     [SerializeField]
     GameObject border;
 
+    [SerializeField]
+    GameObject tutorial_manage;
+
     void Start() { }
 
     // Update is called once per frame
@@ -40,6 +43,7 @@ public class cable_drop : MonoBehaviour
             hat.GetComponent<SpriteRenderer>().enabled = false;
             GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = false;
             GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = false;
+            tutorial_manage.GetComponent<tutorial>().drop_cable_touch = true;
         }
     }
 }

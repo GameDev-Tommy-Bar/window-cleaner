@@ -6,6 +6,7 @@ using System;
 
 public class cleaning_status : MonoBehaviour
 {
+    [SerializeField] GameObject patience_bar;
     [SerializeField]
     GameObject mud;
 
@@ -56,6 +57,7 @@ public class cleaning_status : MonoBehaviour
             coin.GetComponent<SpriteRenderer>().enabled = false;
             int score = Int32.Parse(scoreText.text);
             score += 1;
+            patience_bar.GetComponent<p_bar>().increaseBar(10);
             scoreText.text = score.ToString();
             if (!dirty)
             {
