@@ -4,13 +4,16 @@ using UnityEngine;
 using TMPro;
 using System;
 
-
-
 public class cleaning_status : MonoBehaviour
 {
-    [SerializeField] GameObject mud;
-    [SerializeField] GameObject bubbles;
-    [SerializeField] GameObject coin;
+    [SerializeField]
+    GameObject mud;
+
+    [SerializeField]
+    GameObject bubbles;
+
+    [SerializeField]
+    GameObject coin;
     GameObject windows_manager;
 
     public TMP_Text scoreText;
@@ -18,7 +21,6 @@ public class cleaning_status : MonoBehaviour
     bool is_bubbled = false;
     public bool dirty = true;
 
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -29,37 +31,39 @@ public class cleaning_status : MonoBehaviour
     void Update()
     {
         //Debug.Log(dirty);
-        
     }
-    private void OnTriggerEnter2D(Collider2D other) {
-        if(other.tag == "sponge" && is_mud ){
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "sponge" && is_mud)
+        {
             mud.GetComponent<SpriteRenderer>().enabled = false;
             bubbles.GetComponent<SpriteRenderer>().enabled = true;
             is_mud = false;
             is_bubbled = true;
             dirty = true;
         }
-        if(other.tag == "mop" && is_bubbled){
+        if (other.tag == "mop" && is_bubbled)
+        {
             bubbles.GetComponent<SpriteRenderer>().enabled = false;
             is_mud = false;
             is_bubbled = false;
             dirty = false;
             coin.GetComponent<SpriteRenderer>().enabled = true;
         }
-        if(other.tag == "bag" && coin.GetComponent<SpriteRenderer>().enabled == true ) {
+        if (other.tag == "bag" && coin.GetComponent<SpriteRenderer>().enabled == true)
+        {
             coin.GetComponent<SpriteRenderer>().enabled = false;
             int score = Int32.Parse(scoreText.text);
             score += 1;
             scoreText.text = score.ToString();
-             if (!dirty) 
+            if (!dirty)
             {
                 StartCoroutine(MakeDirtyAgain());
             }
-            
+        }
     }
-    
 
-}
     IEnumerator MakeDirtyAgain()
     {
         float time = windows_manager.GetComponent<timer>().get_time();
@@ -69,6 +73,4 @@ public class cleaning_status : MonoBehaviour
         is_bubbled = false;
         dirty = true;
     }
-
-
 }

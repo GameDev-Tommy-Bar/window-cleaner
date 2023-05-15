@@ -5,24 +5,28 @@ using UnityEngine;
 public class player_follower : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] GameObject player;
-    [SerializeField]Vector3 cables_offset;
+    [SerializeField]
+    GameObject player;
+
+    [SerializeField]
+    Vector3 cables_offset;
     Vector3 playerPos;
     public bool following = false;
-    void Start()
-    {
-        
-    }
+
+    void Start() { }
 
     // Update is called once per frame
     void Update()
     {
-        if(following){
+        if (following)
+        {
             follow();
         }
     }
-    public void follow(){
+
+    public void follow()
+    {
         playerPos = player.transform.position;
-        transform.position = playerPos + cables_offset; 
+        transform.position = playerPos + cables_offset;
     }
 }

@@ -6,26 +6,31 @@ using UnityEngine.SceneManagement;
 
 public class p_bar : MonoBehaviour
 {
+    [SerializeField]
+    public Slider slider;
 
-    [SerializeField] public Slider slider;
-    
-    public void UpdatePBar(float decrease_factor){
+    public void UpdatePBar(float decrease_factor)
+    {
         slider.value -= decrease_factor;
-        Debug.Log("bar level is "+slider.value);
+        Debug.Log("bar level is " + slider.value);
     }
-    public float getMaxValue(){
+
+    public float getMaxValue()
+    {
         return slider.maxValue;
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        //UpdatePBar(100); 
+        //UpdatePBar(100);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(slider.value == 0){
+        if (slider.value == 0)
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         //val = slider.value;
