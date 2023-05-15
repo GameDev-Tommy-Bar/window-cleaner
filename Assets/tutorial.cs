@@ -12,6 +12,7 @@ public class tutorial : MonoBehaviour
     // Start is called before the first frame update
     public GameObject cables;
     public GameObject cable_drop;
+    public GameObject barObject;
     public GameObject health_bar;
     public GameObject background;
     public GameObject cable_drop_arrow;
@@ -62,6 +63,8 @@ public class tutorial : MonoBehaviour
     IEnumerator change_to_bar_hint(){
         yield return new WaitForSeconds(10f);
         tutorial_text.text = patienc_bar;
+        health_bar.GetComponent<p_bar>().increaseFull();
+        health_bar.SetActive(true);
         bar_arrow.GetComponent<SpriteRenderer>().enabled = true;
         StartCoroutine(change_to_drop_cable_hint());
     }
@@ -77,7 +80,6 @@ public class tutorial : MonoBehaviour
         yield return new WaitForSeconds(4f);
         background.GetComponent<SpriteRenderer>().enabled = false;
         tutorial_text.text = " ";
-        float max_val = health_bar.GetComponent<p_bar>().getMaxValue();
-        health_bar.GetComponent<p_bar>().increaseBar(max_val);
+        health_bar.GetComponent<p_bar>().increaseFull();
     }
 }
