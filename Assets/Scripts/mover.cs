@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class mover : MonoBehaviour
 {
+
+    public GameObject tutorial_manage;
+    bool first_time = true;
     [SerializeField]
     GameObject cables;
 
@@ -48,10 +51,14 @@ public class mover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!first_time){
+            tutorial_manage.GetComponent<tutorial>().cable_touch = false;
+        }
         steps_sound.pitch = steps_sound_speed;
         if (!onBuilding)
         {
             PlayerMover();
+
         }
         else
         {
@@ -72,6 +79,12 @@ public class mover : MonoBehaviour
             drop_player.GetComponent<CircleCollider2D>().enabled = true;
             GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = true;
             GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = true;
+            if(first_time){
+                tutorial_manage.GetComponent<tutorial>().move_start = false;
+                tutorial_manage.GetComponent<tutorial>().cable_touch = true;
+                first_time = false;
+            }
+            //tutorial_manage.GetComponent<tutorial>().cable_touch = false;
         }
     }
 
@@ -85,6 +98,10 @@ public class mover : MonoBehaviour
 
     void PlayerMover()
     {
+        if(first_time){
+                tutorial_manage.GetComponent<tutorial>().move_start = true;
+                tutorial_manage.GetComponent<tutorial>().cable_touch = false;
+            }
         curr_speed = speed;
         building_sound.Stop();
         moveX = Input.GetAxis("Horizontal");
