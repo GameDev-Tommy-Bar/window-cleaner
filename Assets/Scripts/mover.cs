@@ -4,32 +4,39 @@ using UnityEngine;
 
 public class mover : MonoBehaviour
 {
-    Vector3 pos_up_down;
-    Vector3 pos_right_left;
-    //[SerializeField] GameObject cable_colliders;
+
     [SerializeField] GameObject cables;
     [SerializeField]Vector3 playerPosOnBuilding;
     [SerializeField] GameObject drop_player;
     [SerializeField] float speed = 3f;
+    [SerializeField] float steps_sound_speed = 1f;
     public bool faceRight = true;
     public GameObject hat;
     public float moveX;
     public float moveY;
-    Collider2D t;
-    private bool isTouchingGround = true;
     public bool onBuilding = false;
-    [SerializeField] GameObject cable1;
-    [SerializeField] GameObject cable2;
-    [SerializeField] float cable1_freezeY;
-    [SerializeField] float cable2_freezeY;
-    // Start is called before the first frame update
-    void Start()
-    {
+    GameObject cable1;
+    GameObject cable2;
+    float cable1_freezeY = 0.2f;
+    float cable2_freezeY = 0.2f;
+    [SerializeField] GameObject footStepsSound;
+    [SerializeField] GameObject buildingSoud;
+    private AudioSource steps_sound;
+    private AudioSource building_sound;
+    private float curr_speed;
+    
+    void Start(){
+        steps_sound = footStepsSound.GetComponent<AudioSource>();
+        building_sound = buildingSoud.GetComponent<AudioSource>();
+        cable1 = cables.transform.Find("cable1").gameObject;
+        cable2 = cables.transform.Find("cable2").gameObject;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        steps_sound.pitch = steps_sound_speed;
         if(!onBuilding){
             PlayerMover();
         }
@@ -41,9 +48,7 @@ public class mover : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
        Debug.Log("triggered" + other.tag);
         if(other.tag == "cable"){
-            isTouchingGround = false;
-            //transform.position = new Vector3(-2.16f,-2.43f,-0.36f);
-            //other.transform.parent = transform;
+
             gameObject.GetComponent<Animator>().enabled = false;
             hat.GetComponent<SpriteRenderer>().enabled = true;
             onBuilding = true;
@@ -53,29 +58,7 @@ public class mover : MonoBehaviour
 
         }
 
-        
-
     }
-    void OnCollisionEnter2D(Collision2D collision)
-{
-    // Check if the collision is with an object that should prevent upward movement
-    if (collision.gameObject.CompareTag("Roof"))
-    {
-        Debug.Log("rooooooooof");
-        // Set the y-axis velocity to 0 to prevent upward movement
-       // gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, 0f);
-    }
-}
-
-    // void OnTriggerExit2D(Collider2D other)
-    // {
-    //     // If the player exits an object with the "Roof" tag, allow it to move freely again
-    //     if (other.CompareTag("Roof"))
-    //     {
-    //         Debug.Log("STOP touced");
-    //         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.GetComponent<Rigidbody2D>().velocity.x, moveY * speed);
-    //     }
-    // }
 
     
     void FlipPlayer()
@@ -86,30 +69,53 @@ public class mover : MonoBehaviour
         transform.localScale = localScale;
     }
 
-    void PlayerMover()
+   void PlayerMover()
+{
+    curr_speed = speed;
+    building_sound.Stop();
+    moveX = Input.GetAxis("Horizontal");
+    
+    if (moveX != 0f)
     {
-        moveX = Input.GetAxis("Horizontal");
-
-        if (moveX < 0.0f && faceRight == false)
+        // Play footsteps sound if it is not already playing.
+        if (!steps_sound.isPlaying)
         {
-            FlipPlayer();
+            steps_sound.Play();
         }
-        else if (moveX > 0.0f && faceRight)
-        {
-            FlipPlayer();
-        }
-        if(moveX != 0f){
-            gameObject.GetComponent<Animator>().enabled = true;
-        }
-        else{
-            gameObject.GetComponent<Animator>().enabled = false;
-        }
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
-            moveX * speed,
-            gameObject.GetComponent<Rigidbody2D>().velocity.y);
+    }
+    else
+    {
+        // Stop the footsteps sound.
+        steps_sound.Stop();
     }
 
+    if (moveX < 0.0f && faceRight == false)
+    {
+        FlipPlayer();
+    }
+    else if (moveX > 0.0f && faceRight)
+    {
+        FlipPlayer();
+    }
+    if(moveX != 0f){
+        gameObject.GetComponent<Animator>().enabled = true;
+    }
+    else{
+        gameObject.GetComponent<Animator>().enabled = false;
+    }
+    gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
+        moveX * curr_speed,
+        gameObject.GetComponent<Rigidbody2D>().velocity.y);
+}
+
+
     void moveOnBuilding(){
+        curr_speed = speed /2;
+        steps_sound.Stop();
+        if (!building_sound.isPlaying)
+        {
+            building_sound.Play();
+        }
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
         if (moveX < 0.0f && faceRight == false)
@@ -126,8 +132,8 @@ public class mover : MonoBehaviour
         }
          
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
-            moveX * speed,
-            moveY * speed);
+            moveX * curr_speed,
+            moveY * curr_speed);
     
     }
 

@@ -345,7 +345,6 @@ GameObject:
   - component: {fileID: 7376560409683350637}
   - component: {fileID: 7376560409683350644}
   - component: {fileID: 7376560409683350641}
-  - component: {fileID: 7376560409683350640}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -520,18 +519,6 @@ MonoBehaviour:
   mop: {fileID: 55305199338740570}
   sponge: {fileID: 2555584970951717388}
   bag: {fileID: 7376560410654280636}
---- !u!114 &7376560409683350640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4037139668873435578}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06f0a845040c4a448ab609c5f71234b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6390691383955386823
 GameObject:
   m_ObjectHideFlags: 0

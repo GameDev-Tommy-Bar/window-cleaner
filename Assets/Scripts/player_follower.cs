@@ -20,7 +20,6 @@ public class player_follower : MonoBehaviour
         if(following){
             follow();
         }
-        
     }
     public void follow(){
         playerPos = player.transform.position;
