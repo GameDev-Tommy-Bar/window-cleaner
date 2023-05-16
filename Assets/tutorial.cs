@@ -11,6 +11,7 @@ public class tutorial : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject cables;
+    public GameObject txt;
     public GameObject cable_drop;
     public GameObject barObject;
     public GameObject health_bar;
@@ -79,7 +80,8 @@ public class tutorial : MonoBehaviour
     IEnumerator empty_text(){
         yield return new WaitForSeconds(4f);
         background.GetComponent<SpriteRenderer>().enabled = false;
-        tutorial_text.text = " ";
+        txt.SetActive(false);
+        // tutorial_text.text = " ";
         health_bar.GetComponent<p_bar>().increaseFull();
     }
 }

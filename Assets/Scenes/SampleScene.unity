@@ -2723,6 +2723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cables: {fileID: 2082972377}
+  txt: {fileID: 1438339054}
   cable_drop: {fileID: 785143854}
   barObject: {fileID: 1431682658}
   health_bar: {fileID: 2135931031}
