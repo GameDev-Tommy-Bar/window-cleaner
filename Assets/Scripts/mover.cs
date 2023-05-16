@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    * This script is used to control the player
+*/
 public class mover : MonoBehaviour
 {
-
     public GameObject tutorial_manage;
     bool first_time = true;
+
     [SerializeField]
     GameObject cables;
 
@@ -40,6 +43,10 @@ public class mover : MonoBehaviour
     private AudioSource building_sound;
     private float curr_speed;
 
+    /*
+        * This function is called when the game starts
+        * It is used to initialize the variables
+    */
     void Start()
     {
         steps_sound = footStepsSound.GetComponent<AudioSource>();
@@ -48,17 +55,22 @@ public class mover : MonoBehaviour
         cable2 = cables.transform.Find("cable2").gameObject;
     }
 
-    // Update is called once per frame
+    /*
+         * This function is called once per frame
+         * It is used to check if the player is on the building
+         * If the player is on the building, the player will move on the building
+         * If the player is not on the building, the player will move on the ground
+    */
     void Update()
     {
-        if(!first_time){
+        if (!first_time)
+        {
             tutorial_manage.GetComponent<tutorial>().cable_touch = false;
         }
         steps_sound.pitch = steps_sound_speed;
         if (!onBuilding)
         {
             PlayerMover();
-
         }
         else
         {
@@ -66,6 +78,11 @@ public class mover : MonoBehaviour
         }
     }
 
+    /*
+        * This function is called when the player enters the drop zone
+        * It resets the player's position and the cable's position
+        * It also disables the collider of the drop zone
+    */
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("triggered" + other.tag);
@@ -79,16 +96,20 @@ public class mover : MonoBehaviour
             drop_player.GetComponent<CircleCollider2D>().enabled = true;
             GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = true;
             GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = true;
-            if(first_time){
+            if (first_time)
+            {
                 tutorial_manage.GetComponent<tutorial>().move_start = false;
                 tutorial_manage.GetComponent<tutorial>().cable_touch = true;
                 first_time = false;
-                Debug.Log("fisrt_time "+first_time);
+                Debug.Log("fisrt_time " + first_time);
             }
             //tutorial_manage.GetComponent<tutorial>().cable_touch = false;
         }
     }
 
+    /*
+        * This function is used to flip the player
+    */
     void FlipPlayer()
     {
         faceRight = !faceRight;
@@ -97,19 +118,25 @@ public class mover : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    /*
+        * This function is used to move the player on the ground
+    */
     void PlayerMover()
     {
-        if(first_time){
-                tutorial_manage.GetComponent<tutorial>().move_start = true;
-                tutorial_manage.GetComponent<tutorial>().cable_touch = false;
-            }
+        if (first_time)
+        {
+            tutorial_manage.GetComponent<tutorial>().move_start = true;
+            tutorial_manage.GetComponent<tutorial>().cable_touch = false;
+        }
         curr_speed = speed;
         building_sound.Stop();
         moveX = Input.GetAxis("Horizontal");
 
         if (moveX != 0f)
         {
-            // Play footsteps sound if it is not already playing.
+            /*
+                 * This function is used to play the footsteps sound
+            */
             if (!steps_sound.isPlaying)
             {
                 steps_sound.Play();
@@ -143,6 +170,9 @@ public class mover : MonoBehaviour
         );
     }
 
+    /*
+        * This function is used to move the player on the building
+    */
     void moveOnBuilding()
     {
         curr_speed = speed / 2;

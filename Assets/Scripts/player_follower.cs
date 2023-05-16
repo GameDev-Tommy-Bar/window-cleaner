@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+    * This script is used to control the camera to follow the player
+*/
 public class player_follower : MonoBehaviour
 {
     // Start is called before the first frame update

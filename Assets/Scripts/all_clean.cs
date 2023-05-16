@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+this func is used to check if all windows are cleaned
+*/
 public class all_clean : MonoBehaviour
 {
     Transform parentTransform;
@@ -12,9 +14,6 @@ public class all_clean : MonoBehaviour
     [Tooltip("if true, when one window is dirty the windows count as dirty")]
     [SerializeField]
     bool andOperator;
-
-    //List<bool> boolList; = new List<bool>(10); // Set capacity to 10
-    // Start is called before the first frame update
     void Start()
     {
         parentTransform = GetComponent<Transform>();
@@ -25,12 +24,6 @@ public class all_clean : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //parentTransform = GetComponent<Transform>();
-
-        // Get the number of child objects
-        //childCount = parentTransform.childCount;
-
-        // Loop through all child objects and check if they are clean
         if (andOperator)
         {
             allClean = true;
@@ -39,6 +32,14 @@ public class all_clean : MonoBehaviour
         {
             allClean = false;
         }
+        /*
+        if andOperator is true, then allClean is true
+        if one window is dirty, then allClean is false
+        if andOperator is false, then allClean is false
+        its go in for loop to check if all windows are dirty
+        if one window is clean, then allClean is true
+
+        */
         for (int i = 0; i < childCount; i++)
         {
             Transform childTransform = parentTransform.GetChild(i);

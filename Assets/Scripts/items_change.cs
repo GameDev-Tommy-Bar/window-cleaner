@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+    * This script is used to control the items change
+*/
 public class items_change : MonoBehaviour
 {
     [SerializeField]
@@ -21,7 +23,10 @@ public class items_change : MonoBehaviour
         bag.GetComponent<SpriteRenderer>().enabled = false;
     }
 
-    // Update is called once per frame
+    /*
+        * This function is used to check if the player presses the key
+        * If the player presses the key, the corresponding item will appear
+    */
     void Update()
     {
         if (Input.GetKey(KeyCode.Z))

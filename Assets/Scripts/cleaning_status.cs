@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-
+/*
+    * This script is used to control the cleaning status of the windows
+*/
 public class cleaning_status : MonoBehaviour
 {
     [SerializeField] GameObject patience_bar;
@@ -33,7 +35,12 @@ public class cleaning_status : MonoBehaviour
     {
         //Debug.Log(dirty);
     }
-
+/*
+    * This function is used to check if the window is cleaned
+    * If the window is cleaned, the mud will disappear and the bubbles will appear
+    * If the bubbles are cleaned, the bubbles will disappear and the coin will appear
+    * If the coin is cleaned, the coin will disappear and the score will increase
+*/
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "sponge" && is_mud)
@@ -65,7 +72,9 @@ public class cleaning_status : MonoBehaviour
             }
         }
     }
-
+/*
+    * This function is used to make the window dirty again after a certain time
+*/
     IEnumerator MakeDirtyAgain()
     {
         float time = windows_manager.GetComponent<timer>().get_time();

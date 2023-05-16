@@ -4,6 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/*
+this func is used to check if all windows are cleaned
+*/
 public class p_bar : MonoBehaviour
 {
     [SerializeField]
@@ -11,11 +14,10 @@ public class p_bar : MonoBehaviour
 
     public void UpdatePBar(float decrease_factor)
     {
-        if(enabled)
+        if (enabled)
         {
             slider.value -= decrease_factor;
         }
-        //Debug.Log("after decrease, bar level is " + slider.value);
     }
 
     public float getMaxValue()
@@ -25,15 +27,14 @@ public class p_bar : MonoBehaviour
 
     public void increaseBar(float increase_factor)
     {
-        if(enabled)
+        if (enabled)
         {
             slider.value += increase_factor;
         }
-        //Debug.Log("after increase, bar level is " + slider.value);
-
     }
 
-    public void increaseFull(){
+    public void increaseFull()
+    {
         slider.value = slider.maxValue;
     }
 

@@ -1,7 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+    * This script is attached to the cable drop zone
+    * It is used to reset the player's position and the cable's position
+    * It is also used to disable the collider of the drop zone  
+*/
 public class cable_drop : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -32,7 +36,11 @@ public class cable_drop : MonoBehaviour
 
     // Update is called once per frame
     void Update() { }
-
+/*
+    * This function is called when the player enters the drop zone
+    * It resets the player's position and the cable's position
+    * It also disables the collider of the drop zone
+*/
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -45,7 +53,8 @@ public class cable_drop : MonoBehaviour
             hat.GetComponent<SpriteRenderer>().enabled = false;
             GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = false;
             GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = false;
-            if(first){
+            if (first)
+            {
                 first = false;
                 tutorial_manage.GetComponent<tutorial>().drop_cable_touch = true;
             }
