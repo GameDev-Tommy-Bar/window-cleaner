@@ -33,7 +33,7 @@ public class tutorial : MonoBehaviour
     void Start()
     {
         tutorial_text.text = open_text; // first text that should be displayed
-        StartCoroutine(first_hint_change());    
+        StartCoroutine(first_hint_change());
     }
 
     // Update is called once per frame
@@ -45,13 +45,14 @@ public class tutorial : MonoBehaviour
             //tutorial_text.transform.position = new Vector3(344.6f,-215.19f,1.84f);
             cables_arrow.GetComponent<SpriteRenderer>().enabled = false;
             StartCoroutine(change_to_bar_hint());
-            
+        
         }
         if(drop_cable_touch){
             drop_cable_touch = false;
             cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = false;
             tutorial_text.text = "GOOD LUCK!";
-            StartCoroutine(empty_text());        }
+            StartCoroutine(empty_text());
+            }
         
         
     }
@@ -60,9 +61,7 @@ public class tutorial : MonoBehaviour
         cables.SetActive(true);
         cables_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = first_hint;
-
     }
-
     IEnumerator change_to_bar_hint(){
         yield return new WaitForSeconds(10f);
         tutorial_text.text = patienc_bar;
