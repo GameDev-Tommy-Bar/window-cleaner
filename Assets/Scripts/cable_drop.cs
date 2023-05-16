@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 /*
     * This script is attached to the cable drop zone
     * It is used to reset the player's position and the cable's position
-    * It is also used to disable the collider of the drop zone  
+    * It is also used to disable the collider of the drop zone
 */
 public class cable_drop : MonoBehaviour
 {
@@ -29,18 +30,17 @@ public class cable_drop : MonoBehaviour
 
     [SerializeField]
     GameObject tutorial_manage;
-
     bool first = true;
 
     void Start() { }
 
     // Update is called once per frame
     void Update() { }
-/*
-    * This function is called when the player enters the drop zone
-    * It resets the player's position and the cable's position
-    * It also disables the collider of the drop zone
-*/
+    /*
+        * This function is called when the player enters the drop zone
+        * It resets the player's position and the cable's position
+        * It also disables the collider of the drop zone
+    */
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))

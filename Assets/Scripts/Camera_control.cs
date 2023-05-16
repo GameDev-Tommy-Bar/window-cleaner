@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 /*
     * This script is used to control the camera to follow the player
 */
@@ -16,9 +17,8 @@ public class Camera_control : MonoBehaviour
     {
         Follow();
     }
-/*
-    * This function is used to follow the player
-*/
+
+    // This function is used to follow the player
     void Follow()
     {
         Vector3 targetPosition = target.position + offset;
