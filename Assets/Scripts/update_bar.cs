@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-this func is used to check if all windows are cleaned
+this script is used to call the p_bar script and integrate between the patience bar and the buildings windows
 */
 public class update_bar : MonoBehaviour
 {
@@ -12,6 +12,9 @@ public class update_bar : MonoBehaviour
 
     [SerializeField]
     GameObject bar;
+
+    [SerializeField]
+    float time_to_wait = 1f;
 
     [SerializeField]
     GameObject windows_manager;
@@ -38,20 +41,24 @@ public class update_bar : MonoBehaviour
             StartCoroutine(decrease_bar());
         }
     }
-
+    /*
+        this method used to decrease the bar every one second when windows are dirty
+    */
     IEnumerator decrease_bar()
     {
         coroutineRunning = true;
         while (dirty)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(time_to_wait);
             float time = DecreaseLifePerSecond(maxTime, patience_time);
             bar.GetComponent<p_bar>().UpdatePBar(time);
             //Debug.Log("time is "+time);
         }
         coroutineRunning = false;
     }
-
+    /*
+        this method is helper method to calculate the amount of value to decrease from patience bar
+    */
     public float DecreaseLifePerSecond(float lifeBarFullCapacity, float timeToDecreaseInMinutes)
     {
         // Convert time to decrease from minutes to seconds

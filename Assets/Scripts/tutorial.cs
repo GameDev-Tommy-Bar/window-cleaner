@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 using TMPro;
 
-
+/*
+    this scripts used to control the tutorial and change/active game parts
+*/
 
 public class tutorial : MonoBehaviour
 {
@@ -30,7 +32,7 @@ public class tutorial : MonoBehaviour
     string drop_cable = "see this blue attach point?\nits next to the door\nthis is how you can\nget down from the cables";
     void Start()
     {
-        tutorial_text.text = open_text;
+        tutorial_text.text = open_text; // first text that should be displayed
         StartCoroutine(first_hint_change());    
     }
 
