@@ -18,7 +18,7 @@ public class Camera_control : MonoBehaviour
         Follow();
     }
 
-    // This function is used to follow the player
+    // This function is used to follow the player using the player position
     void Follow()
     {
         Vector3 targetPosition = target.position + offset;

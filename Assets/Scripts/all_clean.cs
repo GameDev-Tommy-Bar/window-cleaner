@@ -11,7 +11,6 @@ public class all_clean : MonoBehaviour
     public bool all_cleaned;
     bool allClean;
 
-    [Tooltip("if true, when one window is dirty the windows count as dirty")]
     [SerializeField]
     bool andOperator;
     void Start()
@@ -33,11 +32,7 @@ public class all_clean : MonoBehaviour
             allClean = false;
         }
         /*
-        if andOperator is true, then allClean is true
-        if one window is dirty, then allClean is false
-        if andOperator is false, then allClean is false
-        its go in for loop to check if all windows are dirty
-        if one window is clean, then allClean is true
+            this part of code checks every window under the window manager if it dirty or not and calculate allClean;
 
         */
         for (int i = 0; i < childCount; i++)

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class timer : MonoBehaviour
 {
+    /*
+        this script controll the time it take for each building's window to get dirty again.
+    */
     // Start is called before the first frame update
     public float time_between_dirt;
 

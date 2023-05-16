@@ -36,12 +36,12 @@ public class cleaning_status : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(dirty);
     }
 
     /*
     * This function is used to check if the window is cleaned
-    * If the window is cleaned, the mud will disappear and the bubbles will appear
+    * if the mud is on, the player need to use the sponge
+    * if the bubles from sponge on, player need mop to clean them
     * If the bubbles are cleaned, the bubbles will disappear and the coin will appear
     * If the coin is cleaned, the coin will disappear and the score will increase
     */

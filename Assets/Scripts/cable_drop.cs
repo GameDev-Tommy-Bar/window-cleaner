@@ -39,7 +39,9 @@ public class cable_drop : MonoBehaviour
     /*
         * This function is called when the player enters the drop zone
         * It resets the player's position and the cable's position
+        * It also disable the house limits colliders
         * It also disables the collider of the drop zone
+        * the if(first) part mean its first time - using tutorial.
     */
     private void OnTriggerEnter2D(Collider2D other)
     {

@@ -171,7 +171,7 @@ public class mover : MonoBehaviour
     }
 
     /*
-        * This function is used to move the player on the building
+        * This function is used to move the player on the building, vertical movement enabled.
     */
     void moveOnBuilding()
     {

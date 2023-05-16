@@ -5,13 +5,15 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 /*
-this func is used to check if all windows are cleaned
+this func is used to control the patience slider bar
 */
 public class p_bar : MonoBehaviour
 {
     [SerializeField]
     public Slider slider;
-
+    /*
+        this method used to decrease the bar level
+    */
     public void UpdatePBar(float decrease_factor)
     {
         if (enabled)
@@ -19,12 +21,16 @@ public class p_bar : MonoBehaviour
             slider.value -= decrease_factor;
         }
     }
-
+    /*
+        this method used to get the bar maximum level
+    */
     public float getMaxValue()
     {
         return slider.maxValue;
     }
-
+    /*
+        this method used to increase the bar level
+    */
     public void increaseBar(float increase_factor)
     {
         if (enabled)
@@ -32,7 +38,9 @@ public class p_bar : MonoBehaviour
             slider.value += increase_factor;
         }
     }
-
+    /*
+        this method used to fill up the bar
+    */
     public void increaseFull()
     {
         slider.value = slider.maxValue;
@@ -41,7 +49,6 @@ public class p_bar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //UpdatePBar(100);
     }
 
     // Update is called once per frame
@@ -51,7 +58,6 @@ public class p_bar : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        //val = slider.value;
-        //Debug.Log("val: "+val);
+  
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
-    * This script is used to control the camera to follow the player
+    * This script is used to control the cables to follow the player position
 */
 public class player_follower : MonoBehaviour
 {
