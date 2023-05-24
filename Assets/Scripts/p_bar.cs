@@ -9,7 +9,6 @@ this func is used to control the patience slider bar
 */
 public class p_bar : MonoBehaviour
 {
-    [SerializeField]
     public Slider slider;
     /*
         this method used to decrease the bar level

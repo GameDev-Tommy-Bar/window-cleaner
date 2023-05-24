@@ -8,7 +8,7 @@ using TMPro;
     This script is used to control the tutorial and change/activate game parts.
 */
 
-public class Tutorial : MonoBehaviour
+public class tutorial : MonoBehaviour
 {
     public GameObject cables;
     public GameObject txt;
@@ -65,7 +65,7 @@ public class Tutorial : MonoBehaviour
     {
         yield return new WaitForSeconds(10f);
         tutorial_text.text = patience_bar;
-        health_bar.GetComponent<P_Bar>().IncreaseFull();
+        health_bar.GetComponent<p_bar>().increaseFull();
         health_bar.SetActive(true);
         bar_arrow.GetComponent<SpriteRenderer>().enabled = true;
         StartCoroutine(ChangeToDropCableHint());
@@ -85,6 +85,6 @@ public class Tutorial : MonoBehaviour
         yield return new WaitForSeconds(4f);
         background.GetComponent<SpriteRenderer>().enabled = false;
         txt.SetActive(false);
-        health_bar.GetComponent<P_Bar>().IncreaseFull();
+        health_bar.GetComponent<p_bar>().increaseFull();
     }
 }
