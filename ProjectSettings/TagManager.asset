@@ -21,6 +21,8 @@ TagManager:
   - coin
   - bag
   - dropper
+  - enemy
+  - kill_bird
   layers:
   - Default
   - TransparentFX

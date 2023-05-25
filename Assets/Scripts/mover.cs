@@ -20,7 +20,7 @@ public class mover : MonoBehaviour
     GameObject drop_player;
 
     [SerializeField]
-    float speed = 3f;
+    public float speed = 3f;
 
     [SerializeField]
     float steps_sound_speed = 1f;
