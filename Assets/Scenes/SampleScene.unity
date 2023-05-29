@@ -291,7 +291,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &128670525
 Transform:
   m_ObjectHideFlags: 0
@@ -1438,7 +1438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &785143855
 Rigidbody2D:
   serializedVersion: 4
@@ -2161,7 +2161,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2614,7 +2614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1438339055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2831,6 +2831,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b658d9056a2191d4e8f2148292013bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_on: 1
+  instructions: {fileID: 1438339054}
   cables: {fileID: 2082972377}
   txt: {fileID: 1438339054}
   cable_drop: {fileID: 785143854}
@@ -4081,7 +4083,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!61 &2082972378
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4303,7 +4305,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2135931032
 RectTransform:
   m_ObjectHideFlags: 0

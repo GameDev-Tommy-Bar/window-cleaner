@@ -10,6 +10,9 @@ using TMPro;
 
 public class tutorial : MonoBehaviour
 {
+    
+    public bool is_on = true;
+    public GameObject instructions;
     public GameObject cables;
     public GameObject txt;
     public GameObject cable_drop;
@@ -31,19 +34,20 @@ public class tutorial : MonoBehaviour
 
     private void Start()
     {
-        tutorial_text.text = open_text; // First text that should be displayed
-        StartCoroutine(FirstHintChange());
+        if(is_on){
+            health_bar.SetActive(false);
+            cables.SetActive(false);
+            cable_drop.SetActive(false);
+            background.SetActive(true);
+            instructions.SetActive(true);
+            tutorial_text.text = open_text; // First text that should be displayed
+            StartCoroutine(hint1());
+        }
     }
 
     private void Update()
     {
-        if (cable_touch)
-        {
-            tutorial_text.text = change_items;
-            cables_arrow.GetComponent<SpriteRenderer>().enabled = false;
-            StartCoroutine(ChangeToBarHint());
-            cable_touch = false;
-        }
+
         if (drop_cable_touch)
         {
             drop_cable_touch = false;
@@ -53,31 +57,45 @@ public class tutorial : MonoBehaviour
         }
     }
 
-    private IEnumerator FirstHintChange()
+    private IEnumerator hint1()
     {
         yield return new WaitForSeconds(4f);
         cables.SetActive(true);
         cables_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = first_hint;
+        StartCoroutine(hint2());
     }
 
-    private IEnumerator ChangeToBarHint()
+    private IEnumerator hint2(){
+        yield return new WaitForSeconds(6f);
+            tutorial_text.text = change_items;
+            cables_arrow.GetComponent<SpriteRenderer>().enabled = false;
+            StartCoroutine(hint3());
+            cable_touch = false;
+    }
+
+    private IEnumerator hint3()
     {
         yield return new WaitForSeconds(10f);
         tutorial_text.text = patience_bar;
         health_bar.GetComponent<p_bar>().increaseFull();
         health_bar.SetActive(true);
         bar_arrow.GetComponent<SpriteRenderer>().enabled = true;
-        StartCoroutine(ChangeToDropCableHint());
+        StartCoroutine(hint4());
     }
 
-    private IEnumerator ChangeToDropCableHint()
+    private IEnumerator hint4()
     {
         yield return new WaitForSeconds(8f);
         bar_arrow.GetComponent<SpriteRenderer>().enabled = false;
         cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = drop_cable;
         cable_drop.SetActive(true);
+        //drop_cable_touch = false;
+        cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = false;
+        tutorial_text.text = "GOOD LUCK!";
+        StartCoroutine(EmptyText());
+
     }
 
     private IEnumerator EmptyText()
