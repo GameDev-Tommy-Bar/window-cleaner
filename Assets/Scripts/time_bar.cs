@@ -7,6 +7,8 @@ using TMPro;
 public class time_bar : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject end_game;
+
     [SerializeField]
     public Image uiFill;
 
@@ -38,10 +40,11 @@ public class time_bar : MonoBehaviour
             ramainingDuration--;
             yield return new WaitForSeconds(1f);
         }
-        onEnd();
+        //onEnd();
     }
 
-    private void onEnd() { 
-        
+    private void onEnd()
+    {
+        end_game.SetActive(true);
     }
 }
