@@ -34,9 +34,7 @@ public class cleaning_status : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-    }
+    void Update() { }
 
     /*
     * This function is used to check if the window is cleaned
