@@ -33,11 +33,11 @@ public class spawn : MonoBehaviour
             time = Random.Range(min_time, max_time);
             y = Random.Range(min_y,max_y);
             position = new Vector3(transform.position.x,y,-2.5f);
-            Debug.Log("speed is "+speed+", time is + "+time+", y is "+y);
+            //Debug.Log("speed is "+speed+", time is + "+time+", y is "+y);
             yield return new WaitForSeconds(time);
             Instantiate(bird,position,transform.rotation);
             bird.GetComponent<bird_mover>().moveSpeed = speed;
-            Debug.Log("new bird");
+            //Debug.Log("new bird");
         }
     }
 }

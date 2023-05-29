@@ -19,7 +19,6 @@ public class bird_destroy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "kill_bird"){
             Destroy(this.gameObject);
-            Debug.Log("destroyed");
         }
         if(other.gameObject.tag == "player"){
             Debug.Log("player");

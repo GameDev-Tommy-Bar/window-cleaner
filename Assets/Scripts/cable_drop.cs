@@ -30,7 +30,6 @@ public class cable_drop : MonoBehaviour
 
     [SerializeField]
     GameObject tutorial_manage;
-    bool first = true;
 
     void Start() { }
 
@@ -45,7 +44,7 @@ public class cable_drop : MonoBehaviour
     */
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && player.GetComponent<mover>().onBuilding )
         {
             cables.GetComponent<player_follower>().following = false;
             cables.transform.position = cable_origin_pos;
@@ -55,11 +54,7 @@ public class cable_drop : MonoBehaviour
             hat.GetComponent<SpriteRenderer>().enabled = false;
             GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = false;
             GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = false;
-            if (first)
-            {
-                first = false;
-                tutorial_manage.GetComponent<tutorial>().drop_cable_touch = true;
-            }
+            
         }
     }
 }
