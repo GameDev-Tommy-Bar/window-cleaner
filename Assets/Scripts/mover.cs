@@ -7,6 +7,7 @@ using UnityEngine;
 */
 public class mover : MonoBehaviour
 {
+    public GameObject birdSpawnner;
 
     [SerializeField]
     GameObject cables;
@@ -40,6 +41,7 @@ public class mover : MonoBehaviour
     private AudioSource steps_sound;
     private AudioSource building_sound;
     private float curr_speed;
+    public float slow_time = 3f;
 
     /*
         * This function is called when the game starts
@@ -61,7 +63,6 @@ public class mover : MonoBehaviour
     */
     void Update()
     {
-      
         steps_sound.pitch = steps_sound_speed;
         if (!onBuilding)
         {
@@ -80,9 +81,10 @@ public class mover : MonoBehaviour
     */
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("triggered "+other.tag);
+        Debug.Log("triggered " + other.tag);
         if (other.tag == "cable")
         {
+            birdSpawnner.SetActive(true);
             gameObject.GetComponent<Animator>().enabled = false;
             hat.GetComponent<SpriteRenderer>().enabled = true;
             onBuilding = true;
@@ -91,8 +93,22 @@ public class mover : MonoBehaviour
             drop_player.GetComponent<CircleCollider2D>().enabled = true;
             GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = true;
             GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = true;
-
         }
+        if (other.tag == "enemy")
+        {
+            Destroy(other.gameObject);
+            StartCoroutine(slow_player());
+        }
+    }
+
+    private IEnumerator slow_player()
+    {
+        float temp_speed = speed / 2;
+        speed = temp_speed;
+        Debug.Log("low speed for 3 seconds, speed is " + speed);
+        yield return new WaitForSeconds(slow_time);
+        speed *= 2;
+        Debug.Log("return to normal speed, speed is " + speed);
     }
 
     /*
@@ -111,7 +127,6 @@ public class mover : MonoBehaviour
     */
     void PlayerMover()
     {
-      
         curr_speed = speed;
         building_sound.Stop();
         moveX = Input.GetAxis("Horizontal");

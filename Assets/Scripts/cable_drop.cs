@@ -10,6 +10,7 @@ using UnityEngine;
 public class cable_drop : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject birdSpawnner;
     [SerializeField]
     Vector3 cable_origin_pos;
 
@@ -46,6 +47,7 @@ public class cable_drop : MonoBehaviour
     {
         if (other.CompareTag("Player") && player.GetComponent<mover>().onBuilding )
         {
+            birdSpawnner.SetActive(false);
             cables.GetComponent<player_follower>().following = false;
             cables.transform.position = cable_origin_pos;
             transform.GetComponent<CircleCollider2D>().enabled = false;
