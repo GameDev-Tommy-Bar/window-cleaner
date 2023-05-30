@@ -41,6 +41,7 @@ public class update_bar : MonoBehaviour
             StartCoroutine(decrease_bar());
         }
     }
+
     /*
         this method used to decrease the bar every one second when windows are dirty
     */
@@ -56,13 +57,13 @@ public class update_bar : MonoBehaviour
         }
         coroutineRunning = false;
     }
+
     /*
         this method is helper method to calculate the amount of value to decrease from patience bar
     */
-    public float DecreaseLifePerSecond(float lifeBarFullCapacity, float timeToDecreaseInMinutes)
+    public float DecreaseLifePerSecond(float lifeBarFullCapacity, float timeToDecreaseInSeconds)
     {
         // Convert time to decrease from minutes to seconds
-        float timeToDecreaseInSeconds = timeToDecreaseInMinutes * 60f;
 
         // Calculate how much to decrease the life bar each second
         float decreasePerSecond = lifeBarFullCapacity / timeToDecreaseInSeconds;

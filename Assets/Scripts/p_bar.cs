@@ -11,9 +11,14 @@ this func is used to control the patience slider bar
 */
 public class p_bar : MonoBehaviour
 {
+    public GameObject smile_boss;
+    public GameObject regular_boss;
+    public GameObject angry_boss;
+
     public Slider slider;
     public GameObject gameover;
     public TMP_Text score_text;
+    float slider_val;
 
     /*
         this method used to decrease the bar level
@@ -64,6 +69,7 @@ public class p_bar : MonoBehaviour
             onEnd();
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+        boss_change();
     }
 
     private void onEnd()
@@ -71,6 +77,28 @@ public class p_bar : MonoBehaviour
         int score = Int32.Parse(score_text.text);
         gameover.SetActive(true);
         gameover.GetComponent<GameOverScript>().Setup(score);
+    }
 
+    void boss_change()
+    {
+        slider_val = slider.value / slider.maxValue;
+        if (slider_val >= 0.8 && !smile_boss.activeSelf)
+        {
+            smile_boss.SetActive(true);
+            regular_boss.SetActive(false);
+            angry_boss.SetActive(false);
+        }
+        if (slider_val < 0.8 && slider_val >= 0.5 && !regular_boss.activeSelf)
+        {
+            smile_boss.SetActive(false);
+            regular_boss.SetActive(true);
+            angry_boss.SetActive(false);
+        }
+        if (slider_val < 0.4 && !angry_boss.activeSelf)
+        {
+            smile_boss.SetActive(false);
+            regular_boss.SetActive(false);
+            angry_boss.SetActive(true);
+        }
     }
 }
