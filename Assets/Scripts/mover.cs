@@ -176,7 +176,7 @@ public class mover : MonoBehaviour
     */
     void moveOnBuilding()
     {
-        curr_speed = speed / 2;
+        curr_speed = speed / 2 + player_stats.cable_speed_add;
         steps_sound.Stop();
         if (!building_sound.isPlaying)
         {
