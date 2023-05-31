@@ -28,10 +28,14 @@ public class spawn : MonoBehaviour
     float max_y = 0;
     float y;
     Vector3 position;
+    public bool isOn = true;
 
     void Start()
     {
-        StartCoroutine(bird_spawn());
+        if (isOn)
+        {
+            StartCoroutine(bird_spawn());
+        }
     }
 
     // Update is called once per frame
