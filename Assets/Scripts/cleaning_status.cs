@@ -64,7 +64,7 @@ public class cleaning_status : MonoBehaviour
         if (other.tag == "bag" && coin.GetComponent<SpriteRenderer>().enabled == true)
         {
             coin.GetComponent<SpriteRenderer>().enabled = false;
-            int score = player_stats.score;
+            float score = player_stats.score;
             score++;
             player_stats.score = score;
             patience_bar.GetComponent<p_bar>().increaseBar(10);
