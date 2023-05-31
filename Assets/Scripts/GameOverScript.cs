@@ -19,11 +19,16 @@ public class GameOverScript : MonoBehaviour
     public void Setup(int score)
     {
         gameObject.SetActive(true);
-        points_text.text = score + " POINTS";
+        points_text.text = player_stats.score + " POINTS";
     }
 
     public void play_again()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void main_screen()
+    {
+        SceneManager.LoadScene("main_screen");
     }
 }

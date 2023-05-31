@@ -27,6 +27,7 @@ public class p_bar : MonoBehaviour
     {
         if (enabled)
         {
+            Debug.Log("slide value is " + slider.value);
             slider.value -= decrease_factor;
         }
     }
@@ -46,7 +47,14 @@ public class p_bar : MonoBehaviour
     {
         if (enabled)
         {
-            slider.value += increase_factor;
+            if (!(slider.value + increase_factor >= slider.maxValue))
+            {
+                slider.value += increase_factor;
+            }
+            else
+            {
+                slider.value = slider.maxValue;
+            }
         }
     }
 
