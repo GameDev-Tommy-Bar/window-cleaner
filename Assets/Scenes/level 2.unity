@@ -735,6 +735,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.6071
       objectReference: {fileID: 0}
+    - target: {fileID: 6412787444185689780, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.51
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787444185689781, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: hat
       value: 
@@ -751,6 +755,14 @@ PrefabInstance:
       propertyPath: tutorial_manage
       value: 
       objectReference: {fileID: 1468188559}
+    - target: {fileID: 6412787444278403008, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10.195099
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787444278403008, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2636
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787444798770132, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: scoreText
       value: 
@@ -759,10 +771,26 @@ PrefabInstance:
       propertyPath: patience_bar
       value: 
       objectReference: {fileID: 842996899}
+    - target: {fileID: 6412787444813248389, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787444813248389, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.67
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 6798187759975678727}
+    - target: {fileID: 6412787445246146266, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10.0794735
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787445246146266, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2754
+      objectReference: {fileID: 0}
     - target: {fileID: 6612612862955609151, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_LocalScale.y
       value: 10.063358
@@ -864,6 +892,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99412bf77a0199043801493f6b0922f1, type: 3}
+--- !u!1 &1423665312 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6412787444947489887, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+  m_PrefabInstance: {fileID: 1079381990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1434678510 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8145066443589301322, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
@@ -1762,7 +1795,11 @@ PrefabInstance:
     - target: {fileID: 7376560409683350644, guid: 1a02de275d83c594b9a28ddb5447c200, type: 3}
       propertyPath: cables
       value: 
-      objectReference: {fileID: 2082972377}
+      objectReference: {fileID: 1423665312}
+    - target: {fileID: 7376560409683350644, guid: 1a02de275d83c594b9a28ddb5447c200, type: 3}
+      propertyPath: onBuilding
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7376560409683350644, guid: 1a02de275d83c594b9a28ddb5447c200, type: 3}
       propertyPath: drop_player
       value: 

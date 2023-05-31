@@ -12,8 +12,8 @@ public class mover : MonoBehaviour
     [SerializeField]
     GameObject cables;
 
-    [SerializeField]
-    Vector3 playerPosOnBuilding;
+   // [SerializeField]
+    //Vector3 playerPosOnBuilding;
 
     [SerializeField]
     GameObject drop_player;
@@ -89,7 +89,9 @@ public class mover : MonoBehaviour
             hat.GetComponent<SpriteRenderer>().enabled = true;
             onBuilding = true;
             cables.GetComponent<player_follower>().following = true;
-            transform.position = playerPosOnBuilding;
+            // i want the transrom position on the building will effect only on y axis and on corrent y -2.0
+            transform.position = new Vector3(transform.position.x, -3.2f, transform.position.z);
+            //transform.position = playerPosOnBuilding;
             drop_player.GetComponent<CircleCollider2D>().enabled = true;
             GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = true;
             GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = true;

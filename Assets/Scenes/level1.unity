@@ -780,6 +780,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 512199935522503976, guid: 0f4c2babbb79956488d28255c4dd93d4, type: 3}
+      propertyPath: isOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 512199935522503977, guid: 0f4c2babbb79956488d28255c4dd93d4, type: 3}
       propertyPath: m_Name
       value: bird_spawner
