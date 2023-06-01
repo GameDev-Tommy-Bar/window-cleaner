@@ -7,12 +7,13 @@ using UnityEngine;
 */
 public class mover : MonoBehaviour
 {
+    public GameObject pause_menu;
     public GameObject birdSpawnner;
 
     [SerializeField]
     GameObject cables;
 
-   // [SerializeField]
+    // [SerializeField]
     //Vector3 playerPosOnBuilding;
 
     [SerializeField]
@@ -38,8 +39,8 @@ public class mover : MonoBehaviour
 
     [SerializeField]
     GameObject buildingSoud;
-    private AudioSource steps_sound;
-    private AudioSource building_sound;
+    public AudioSource steps_sound;
+    public AudioSource building_sound;
     private float curr_speed;
     public float slow_time = 3f;
 
@@ -178,7 +179,7 @@ public class mover : MonoBehaviour
     {
         curr_speed = speed / 2 + player_stats.cable_speed_add;
         steps_sound.Stop();
-        if (!building_sound.isPlaying)
+        if (!building_sound.isPlaying && !pause_menu.activeSelf)
         {
             building_sound.Play();
         }
