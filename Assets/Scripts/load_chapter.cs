@@ -11,5 +11,6 @@ public class load_chapter : MonoBehaviour
     public void load_level()
     {
         SceneManager.LoadScene(chapter_name);
+        Time.timeScale = 1f;
     }
 }
