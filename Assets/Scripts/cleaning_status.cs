@@ -68,6 +68,8 @@ public class cleaning_status : MonoBehaviour
             float score = player_stats.score;
             score++;
             player_stats.score = score;
+            player_stats.current_level_points++;
+            player_stats.windows_cleand++;
             patience_bar.GetComponent<p_bar>().increaseBar(10);
             scoreText.text = score.ToString();
             if (!dirty)

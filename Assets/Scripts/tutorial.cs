@@ -33,6 +33,8 @@ public class tutorial : MonoBehaviour
     private string drop_cable =
         "See this blue attach point?\nIt's next to the door.\nThis is how you can\ndrop down from the cables.";
 
+    public GameObject cable_border;
+
     private void Start()
     {
         if (is_on)
@@ -64,6 +66,8 @@ public class tutorial : MonoBehaviour
         cables.SetActive(true);
         cables_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = first_hint;
+        cable_border.SetActive(true);
+
         StartCoroutine(hint2());
     }
 
