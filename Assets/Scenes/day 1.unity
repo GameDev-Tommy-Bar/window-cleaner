@@ -644,6 +644,7 @@ MonoBehaviour:
   drop_cable_touch: 0
   cable_touch: 0
   move_start: 0
+  cable_border: {fileID: 1879815399}
 --- !u!4 &1468188561
 Transform:
   m_ObjectHideFlags: 0
@@ -672,6 +673,11 @@ GameObject:
 --- !u!1 &1635739402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8883146741250470723, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+  m_PrefabInstance: {fileID: 6412787443401602694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1879815399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6412787444678717599, guid: 8335c572fdc75644498863ee247346a4, type: 3}
   m_PrefabInstance: {fileID: 6412787443401602694}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1904524950 stripped
@@ -1382,6 +1388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Building
       objectReference: {fileID: 0}
+    - target: {fileID: 6412787443345450503, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.13
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: bar
       value: 
@@ -1397,6 +1407,10 @@ PrefabInstance:
     - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: min_time
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787444185689780, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.21
       objectReference: {fileID: 0}
     - target: {fileID: 6412787444185689781, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: hat
@@ -1414,6 +1428,14 @@ PrefabInstance:
       propertyPath: tutorial_manage
       value: 
       objectReference: {fileID: 1468188559}
+    - target: {fileID: 6412787444278403010, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787444678717599, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787444798770132, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: scoreText
       value: 
@@ -1422,6 +1444,10 @@ PrefabInstance:
       propertyPath: patience_bar
       value: 
       objectReference: {fileID: 842996899}
+    - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: border
+      value: 
+      objectReference: {fileID: 1879815399}
     - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: cable1
       value: 
@@ -1446,6 +1472,10 @@ PrefabInstance:
       propertyPath: drop_player
       value: 
       objectReference: {fileID: 785143854}
+    - target: {fileID: 6412787445246146264, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6965321437645014328, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

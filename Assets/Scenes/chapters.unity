@@ -1455,7 +1455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   is_chapter: 1
-  chapter_name: level2
+  chapter_name: day 2
   level_lock: {fileID: 1116235580}
 --- !u!1 &920112488
 GameObject:
@@ -1996,6 +1996,7 @@ GameObject:
   - component: {fileID: 1309628705}
   - component: {fileID: 1309628707}
   - component: {fileID: 1309628706}
+  - component: {fileID: 1309628708}
   m_Layer: 5
   m_Name: chapter3
   m_TagString: Untagged
@@ -2063,6 +2064,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309628704}
   m_CullTransparentMesh: 1
+--- !u!114 &1309628708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1309628704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18321a19a687e0640b06616d163584d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_chapter: 1
+  chapter_name: day 3
+  level_lock: {fileID: 1326506026}
 --- !u!1 &1326506026
 GameObject:
   m_ObjectHideFlags: 0
