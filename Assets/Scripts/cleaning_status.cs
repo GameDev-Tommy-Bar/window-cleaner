@@ -9,6 +9,9 @@ using System;
 */
 public class cleaning_status : MonoBehaviour
 {
+    public float fadeDuration = 3f; // Time in seconds to fade out the game object
+    private float fadeProgress = 0f;
+
     [SerializeField]
     GameObject patience_bar;
 
@@ -47,19 +50,18 @@ public class cleaning_status : MonoBehaviour
     {
         if (other.tag == "sponge" && is_mud)
         {
-            mud.GetComponent<SpriteRenderer>().enabled = false;
-            bubbles.GetComponent<SpriteRenderer>().enabled = true;
+            //mud.GetComponent<SpriteRenderer>().enabled = false;
+            //bubbles.GetComponent<SpriteRenderer>().enabled = true;
             is_mud = false;
-            is_bubbled = true;
             dirty = true;
+            StartCoroutine(mud_fade_out());
         }
         if (other.tag == "mop" && is_bubbled)
         {
-            bubbles.GetComponent<SpriteRenderer>().enabled = false;
+            //mud.GetComponent<fadeOut>().isFading = false;
+            //bubbles.GetComponent<SpriteRenderer>().enabled = false;
             is_mud = false;
-            is_bubbled = false;
-            dirty = false;
-            coin.GetComponent<SpriteRenderer>().enabled = true;
+            StartCoroutine(bubbles_fade_out());
         }
         if (other.tag == "bag" && coin.GetComponent<SpriteRenderer>().enabled == true)
         {
@@ -82,9 +84,32 @@ public class cleaning_status : MonoBehaviour
     {
         float time = windows_manager.GetComponent<timer>().get_time();
         yield return new WaitForSeconds(time);
-        mud.GetComponent<SpriteRenderer>().enabled = true;
+        mud.GetComponent<fadeOut>().RestoreSize();
+        bubbles.GetComponent<fadeOut>().RestoreSize();
+        bubbles.GetComponent<SpriteRenderer>().enabled = false;
         is_mud = true;
         is_bubbled = false;
         dirty = true;
+    }
+
+    IEnumerator mud_fade_out()
+    {
+        float time = player_stats.mud_fade_duration;
+        mud.GetComponent<fadeOut>().enabled = true;
+        yield return new WaitForSeconds(time);
+        bubbles.GetComponent<SpriteRenderer>().enabled = true;
+        is_bubbled = true;
+        mud.GetComponent<fadeOut>().enabled = false;
+    }
+
+    IEnumerator bubbles_fade_out()
+    {
+        float time = player_stats.bubbles_fade_duration;
+        bubbles.GetComponent<fadeOut>().enabled = true;
+        yield return new WaitForSeconds(time);
+        is_bubbled = false;
+        coin.GetComponent<SpriteRenderer>().enabled = true;
+        dirty = false;
+        bubbles.GetComponent<fadeOut>().enabled = false;
     }
 }

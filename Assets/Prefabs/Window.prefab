@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7009041422103032633}
   - component: {fileID: 7009041422103032638}
+  - component: {fileID: 47117479187491827}
   m_Layer: 0
   m_Name: mud
   m_TagString: mud
@@ -168,6 +169,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &47117479187491827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009041422103032632}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2969443b7256def43abf3439486d4507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 3
+  fadeSpeed: 0.5
+  faded_in: 1
+  mud: 1
 --- !u!1 &7009041422319485319
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,9 +334,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a2010ba86dc8bb4c8edff20764ccf0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeDuration: 3
+  patience_bar: {fileID: 0}
   mud: {fileID: 7009041422103032632}
   bubbles: {fileID: 7009041422634516956}
   coin: {fileID: 3480965259019985623}
+  scoreText: {fileID: 0}
+  dirty: 1
 --- !u!1 &7009041422634516956
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,6 +351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7009041422634516957}
   - component: {fileID: 7009041422634516946}
+  - component: {fileID: 5174862947569195038}
   m_Layer: 0
   m_Name: bubbles
   m_TagString: Untagged
@@ -404,3 +426,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5174862947569195038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7009041422634516956}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2969443b7256def43abf3439486d4507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeDuration: 3
+  fadeSpeed: 0.5
+  faded_in: 1
+  mud: 0
