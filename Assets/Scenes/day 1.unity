@@ -426,6 +426,10 @@ MonoBehaviour:
   update_player_score: 1
   update_cable_speed: 0
   score_num: 0
+  sponge: 0
+  mop: 0
+  dirty: 0
+  total_windows: 0
 --- !u!224 &1197929351 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4637485684370208781, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
@@ -626,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b658d9056a2191d4e8f2148292013bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_on: 0
+  is_on: 1
   instructions: {fileID: 1438339054}
   cables: {fileID: 2082972377}
   txt: {fileID: 1438339054}

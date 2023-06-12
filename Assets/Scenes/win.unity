@@ -176,8 +176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18321a19a687e0640b06616d163584d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  is_chapter: 1
+  is_chapter: 0
   chapter_name: main_screen
+  level_lock: {fileID: 0}
 --- !u!114 &50408959
 MonoBehaviour:
   m_ObjectHideFlags: 0

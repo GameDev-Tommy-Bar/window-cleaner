@@ -11,14 +11,25 @@ public class load_chapter : MonoBehaviour
     [SerializeField]
     string chapter_name;
 
+    [SerializeField]
+    GameObject level_lock;
+
     public void load_level()
     {
-        SceneManager.LoadScene(chapter_name);
-        Time.timeScale = 1f;
         if (is_chapter)
         {
-            player_stats.current_day = chapter_name;
-            player_stats.current_level_points = 0;
+            if (!level_lock.activeSelf)
+            {
+                player_stats.current_day = chapter_name;
+                player_stats.current_level_points = 0;
+                SceneManager.LoadScene(chapter_name);
+                Time.timeScale = 1f;
+            }
+        }
+        else
+        {
+            SceneManager.LoadScene(chapter_name);
+            Time.timeScale = 1f;
         }
     }
 }
