@@ -10,13 +10,11 @@ using TMPro;
 
 public class tutorial : MonoBehaviour
 {
-    
     public bool is_on = true;
     public GameObject instructions;
     public GameObject cables;
     public GameObject txt;
     public GameObject cable_drop;
-    public GameObject barObject;
     public GameObject health_bar;
     public GameObject background;
     public GameObject cable_drop_arrow;
@@ -28,13 +26,17 @@ public class tutorial : MonoBehaviour
     public bool move_start = false;
     private string open_text = "Hey new player\nWelcome to your new job\nas window cleaner!";
     private string first_hint = "Hurry up!\nClimb the building\nand start cleaning!!";
-    private string change_items = "Your tools are:\nMop, Sponge, and Money bag.\nChange them with 'Z', 'X', 'C', 'V' keys";
-    private string patience_bar = "See the patience bar\nat the top left.\nWhen the building is dirty\nthe boss is getting mad!";
-    private string drop_cable = "See this blue attach point?\nIt's next to the door.\nThis is how you can\ndrop down from the cables.";
+    private string change_items =
+        "Your tools are:\nMop, Sponge, and Money bag.\nChange them with 'Z', 'X', 'C', 'V' keys";
+    private string patience_bar =
+        "See the patience bar\nat the top left.\nWhen the building is dirty\nthe boss is getting mad!";
+    private string drop_cable =
+        "See this blue attach point?\nIt's next to the door.\nThis is how you can\ndrop down from the cables.";
 
     private void Start()
     {
-        if(is_on){
+        if (is_on)
+        {
             health_bar.SetActive(false);
             cables.SetActive(false);
             cable_drop.SetActive(false);
@@ -47,7 +49,6 @@ public class tutorial : MonoBehaviour
 
     private void Update()
     {
-
         if (drop_cable_touch)
         {
             drop_cable_touch = false;
@@ -66,12 +67,13 @@ public class tutorial : MonoBehaviour
         StartCoroutine(hint2());
     }
 
-    private IEnumerator hint2(){
+    private IEnumerator hint2()
+    {
         yield return new WaitForSeconds(6f);
-            tutorial_text.text = change_items;
-            cables_arrow.GetComponent<SpriteRenderer>().enabled = false;
-            StartCoroutine(hint3());
-            cable_touch = false;
+        tutorial_text.text = change_items;
+        cables_arrow.GetComponent<SpriteRenderer>().enabled = false;
+        StartCoroutine(hint3());
+        cable_touch = false;
     }
 
     private IEnumerator hint3()
@@ -93,16 +95,21 @@ public class tutorial : MonoBehaviour
         cable_drop.SetActive(true);
         //drop_cable_touch = false;
         cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = false;
-        tutorial_text.text = "GOOD LUCK!";
-        StartCoroutine(EmptyText());
-
+        StartCoroutine(goodluck());
     }
 
     private IEnumerator EmptyText()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(8f);
         background.GetComponent<SpriteRenderer>().enabled = false;
         txt.SetActive(false);
         health_bar.GetComponent<p_bar>().increaseFull();
+    }
+
+    private IEnumerator goodluck()
+    {
+        yield return new WaitForSeconds(6);
+        tutorial_text.text = "GOOD LUCK!\n survive the day!";
+        StartCoroutine(EmptyText());
     }
 }
