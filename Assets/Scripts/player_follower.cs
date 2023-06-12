@@ -22,6 +22,7 @@ public class player_follower : MonoBehaviour
     float cable2_freezeY = 0.2f;
     [SerializeField] GameObject cables;
     [SerializeField] GameObject drop_player;
+    [SerializeField] GameObject birdSpawnner;
 
 
 
@@ -55,6 +56,7 @@ public class player_follower : MonoBehaviour
         if (other.tag == "Player"){
             cables.GetComponent<player_follower>().following = true;
             drop_player.GetComponent<CircleCollider2D>().enabled = true;
+            birdSpawnner.SetActive(true);
 
         }
       
