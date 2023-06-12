@@ -23,6 +23,7 @@ public class player_follower : MonoBehaviour
     [SerializeField] GameObject cables;
     [SerializeField] GameObject drop_player;
     [SerializeField] GameObject birdSpawnner;
+    [SerializeField] GameObject border;
 
 
 
@@ -57,6 +58,7 @@ public class player_follower : MonoBehaviour
             cables.GetComponent<player_follower>().following = true;
             drop_player.GetComponent<CircleCollider2D>().enabled = true;
             birdSpawnner.SetActive(true);
+            border.SetActive(true);
 
         }
       
