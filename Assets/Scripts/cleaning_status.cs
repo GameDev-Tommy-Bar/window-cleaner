@@ -10,6 +10,7 @@ using System;
 public class cleaning_status : MonoBehaviour
 {
     public float fadeDuration = 3f; // Time in seconds to fade out the game object
+    private float fadeProgress = 0f;
 
     [SerializeField]
     GameObject patience_bar;
@@ -68,6 +69,7 @@ public class cleaning_status : MonoBehaviour
             float score = player_stats.score;
             score++;
             player_stats.score = score;
+            player_stats.current_level_points++;
             patience_bar.GetComponent<p_bar>().increaseBar(10);
             scoreText.text = score.ToString();
             if (!dirty)

@@ -18,6 +18,7 @@ public class load_chapter : MonoBehaviour
         if (is_chapter)
         {
             player_stats.current_day = chapter_name;
+            player_stats.current_level_points = 0;
         }
     }
 }
