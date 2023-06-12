@@ -10,7 +10,6 @@ using System;
 public class cleaning_status : MonoBehaviour
 {
     public float fadeDuration = 3f; // Time in seconds to fade out the game object
-    private float fadeProgress = 0f;
 
     [SerializeField]
     GameObject patience_bar;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class time_bar : MonoBehaviour
 {
@@ -40,11 +41,14 @@ public class time_bar : MonoBehaviour
             ramainingDuration--;
             yield return new WaitForSeconds(1f);
         }
-        //onEnd();
+        if (ramainingDuration == -1)
+        {
+            onEnd();
+        }
     }
 
     private void onEnd()
     {
-        end_game.SetActive(true);
+        SceneManager.LoadScene("win");
     }
 }

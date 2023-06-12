@@ -270,6 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18321a19a687e0640b06616d163584d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_chapter: 0
   chapter_name: main_screen
 --- !u!1 &38719147
 GameObject:
@@ -593,9 +594,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 428691614}
-  name_of_power: cable_speed_add
   update_player_score: 0
   update_cable_speed: 1
+  score_num: 0
 --- !u!114 &428691614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,9 +1362,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1830939229}
-  name_of_power: score
   update_player_score: 1
   update_cable_speed: 0
+  score_num: 0
 --- !u!114 &1830939229
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,5 +14,6 @@ public class main_screen_manage : MonoBehaviour
     public void playButton()
     {
         SceneManager.LoadScene("chapters");
+        Time.timeScale = 1f;
     }
 }

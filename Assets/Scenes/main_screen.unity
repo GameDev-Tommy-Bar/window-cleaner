@@ -288,9 +288,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1928580190}
-  name_of_power: coins
   update_player_score: 1
   update_cable_speed: 0
+  score_num: 0
 --- !u!4 &166495407
 Transform:
   m_ObjectHideFlags: 0
@@ -1055,9 +1055,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1928580190}
-  name_of_power: 
   update_player_score: 0
   update_cable_speed: 0
+  score_num: 0
 --- !u!1 &1641174036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1205,6 +1205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18321a19a687e0640b06616d163584d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_chapter: 0
   chapter_name: shop
 --- !u!1 &1706515353
 GameObject:
@@ -1622,6 +1623,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18321a19a687e0640b06616d163584d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  is_chapter: 0
   chapter_name: stats
 --- !u!114 &2116148149
 MonoBehaviour:
