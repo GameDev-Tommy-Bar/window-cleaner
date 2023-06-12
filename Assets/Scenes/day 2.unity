@@ -508,6 +508,10 @@ MonoBehaviour:
   update_player_score: 1
   update_cable_speed: 0
   score_num: 0
+  sponge: 0
+  mop: 0
+  dirty: 0
+  total_windows: 0
 --- !u!1001 &1172323106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1172,6 +1176,7 @@ MonoBehaviour:
   drop_cable_touch: 0
   cable_touch: 0
   move_start: 0
+  cable_border: {fileID: 0}
 --- !u!4 &1468188561
 Transform:
   m_ObjectHideFlags: 0
@@ -1509,13 +1514,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 519420032}
     m_Modifications:
+    - target: {fileID: 4637485683068248104, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
+      propertyPath: is_chapter
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4637485684154787758, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
       propertyPath: m_Name
       value: score
       objectReference: {fileID: 0}
     - target: {fileID: 4637485684154787758, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4637485684370208781, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
       propertyPath: m_Pivot.x
@@ -1599,6 +1608,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4637485684370208781, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637485684886708387, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
+      propertyPath: is_chapter
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

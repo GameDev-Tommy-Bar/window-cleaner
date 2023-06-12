@@ -1380,6 +1380,7 @@ MonoBehaviour:
   drop_cable_touch: 0
   cable_touch: 0
   move_start: 0
+  cable_border: {fileID: 0}
 --- !u!4 &1468188561
 Transform:
   m_ObjectHideFlags: 0
@@ -2377,6 +2378,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 519420032}
     m_Modifications:
+    - target: {fileID: 4637485683068248104, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
+      propertyPath: is_chapter
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4637485684886708387, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
+      propertyPath: is_chapter
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8145066443589301322, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
       propertyPath: m_IsActive
       value: 0
