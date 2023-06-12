@@ -18,8 +18,8 @@ public class player_follower : MonoBehaviour
     [SerializeField] GameObject building;
     [SerializeField] GameObject cable1;
     [SerializeField] GameObject cable2;
-    float cable1_freezeY = 0.2f;
-    float cable2_freezeY = 0.2f;
+    [SerializeField]float cable1_freezeY = 0.2f;
+    [SerializeField]float cable2_freezeY = 0.2f;
     [SerializeField] GameObject cables;
     [SerializeField] GameObject drop_player;
     [SerializeField] GameObject birdSpawnner;
