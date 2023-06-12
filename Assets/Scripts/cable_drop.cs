@@ -54,9 +54,9 @@ public class cable_drop : MonoBehaviour
             player.transform.position = player_origin_pos;
             player.GetComponent<mover>().onBuilding = false;
             hat.GetComponent<SpriteRenderer>().enabled = false;
-            GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = false;
-            GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = false;
-            
+            // GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = false;
+            // GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = false;
+            border.SetActive(false);
         }
     }
 }
