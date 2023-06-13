@@ -10,14 +10,19 @@
 #### משחקים בעזרת מקשי החיצים כדי לזוז
 #### מחליפים את ציוד הניקיון באמצעות המקש TAB
 #### [שחקו במשחק](https://tommy-bar.itch.io/windows-cleaner)
+#### מסך פתיחה
 ![pic1](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/f86d52be03ac71434ad937532b02715ca9b7114b/Assets/Pics/main_screen.PNG)
+#### בחירת שלב
 ![pic2](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/f86d52be03ac71434ad937532b02715ca9b7114b/Assets/Pics/chapters.PNG)
+#### מצבים מהמשחק
 ![pic3](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/6a98e9b777fde8bb9d01ed9c4d9a956da2e59456/Assets/Pics/play1.PNG)
 ![pic5](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/f86d52be03ac71434ad937532b02715ca9b7114b/Assets/Pics/pause.PNG)
 ![pic31](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/6a98e9b777fde8bb9d01ed9c4d9a956da2e59456/Assets/Pics/play2.PNG)
-![pic32](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/f86d52be03ac71434ad937532b02715ca9b7114b/Assets/Pics/shop.PNG)
-![pic4](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/f86d52be03ac71434ad937532b02715ca9b7114b/Assets/Pics/stats.PNG)
 ![pic32](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/6a98e9b777fde8bb9d01ed9c4d9a956da2e59456/Assets/Pics/gameOver.PNG)
+#### חנות השיפורים
+![pic32](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/f86d52be03ac71434ad937532b02715ca9b7114b/Assets/Pics/shop.PNG)
+#### נתוני השחקן
+![pic4](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/f86d52be03ac71434ad937532b02715ca9b7114b/Assets/Pics/stats.PNG)
 
 #### הכנו prefabs של שחקן וחלונות, לשחקן יש את היכולת לזוז ימינה שמאלה ולמעלה למטה באמצעות סקריפט תזוזה, והוא מחזיק בידו ספוג ומגב
 #### בתחילת המשחק רכיב ההצגה של הספוג והמגב כבוי ומשתנה בהתאם לקלט מהמשתמש
