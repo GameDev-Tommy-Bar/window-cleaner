@@ -2706,6 +2706,10 @@ PrefabInstance:
       propertyPath: is_chapter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4637485683920725611, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
+      propertyPath: duration
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 4637485684154787756, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
       propertyPath: m_PresetInfoIsWorld
       value: 1

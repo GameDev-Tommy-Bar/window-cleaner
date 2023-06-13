@@ -2729,6 +2729,10 @@ PrefabInstance:
       propertyPath: duration
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 4637485684154787756, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8145066443589301322, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
       propertyPath: m_IsActive
       value: 0
