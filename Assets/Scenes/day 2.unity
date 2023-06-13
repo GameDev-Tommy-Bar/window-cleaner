@@ -654,6 +654,10 @@ MonoBehaviour:
   shop_show_sponge: 0
   shop_show_speed: 0
   shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!1001 &1172323106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2223,11 +2227,11 @@ PrefabInstance:
       objectReference: {fileID: 842996899}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: patience_time
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: window_manager1
