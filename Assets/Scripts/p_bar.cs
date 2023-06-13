@@ -82,7 +82,8 @@ public class p_bar : MonoBehaviour
 
     private void onEnd()
     {
-        int score = Int32.Parse(score_text.text);
+        string scoreText = score_text.text;
+        int score = Int32.Parse(scoreText.Substring(0, scoreText.Length - 1));
         gameover.SetActive(true);
         gameover.GetComponent<GameOverScript>().Setup(score);
     }
