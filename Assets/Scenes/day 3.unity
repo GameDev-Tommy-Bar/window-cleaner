@@ -649,6 +649,10 @@ MonoBehaviour:
   shop_show_sponge: 0
   shop_show_speed: 0
   shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!1001 &1172323106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -969,8 +973,12 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6412787444185689780, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787444185689780, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.74
+      value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 6412787444185689781, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: hat
@@ -990,11 +998,11 @@ PrefabInstance:
       objectReference: {fileID: 1468188559}
     - target: {fileID: 6412787444185689781, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: cable_origin_pos.x
-      value: 19.07
+      value: 23.4
       objectReference: {fileID: 0}
     - target: {fileID: 6412787444185689781, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: player_origin_pos.x
-      value: 21
+      value: 15.47
       objectReference: {fileID: 0}
     - target: {fileID: 6412787444278403010, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_Enabled
@@ -1050,7 +1058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6412787444947489885, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.39
+      value: 5.58
       objectReference: {fileID: 0}
     - target: {fileID: 6412787445246146264, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_Enabled
