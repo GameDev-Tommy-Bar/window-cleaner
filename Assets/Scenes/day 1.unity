@@ -563,6 +563,10 @@ MonoBehaviour:
   mop: 0
   dirty: 0
   total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
 --- !u!224 &1197929351 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4637485684370208781, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
@@ -748,7 +752,9 @@ PrefabInstance:
       propertyPath: pause_panel
       value: 
       objectReference: {fileID: 2076458238}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3882260870509964350, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
+    - {fileID: 9211514325845398521, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
 --- !u!1 &1468188559
 GameObject:

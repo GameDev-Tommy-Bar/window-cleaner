@@ -190,8 +190,6 @@ GameObject:
   - component: {fileID: 4365525070967225419}
   - component: {fileID: 4365525070967225418}
   - component: {fileID: 4365525070967225417}
-  - component: {fileID: 3882260870509964350}
-  - component: {fileID: 9211514325845398521}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -293,36 +291,6 @@ MonoBehaviour:
   slider: {fileID: 4365525070967225418}
   gameover: {fileID: 0}
   score_text: {fileID: 0}
---- !u!114 &3882260870509964350
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4365525070967225412}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0903f64b239e05a4ba4494c2a83fed00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  patience_time: 0
-  bar: {fileID: 4365525070967225412}
-  time_to_wait: 1
-  windows_manager: {fileID: 0}
---- !u!114 &9211514325845398521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4365525070967225412}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0732c24ce6ef2c42acbc45abc2a7ba1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  all_cleaned: 0
-  andOperator: 0
 --- !u!1 &4365525071346559288
 GameObject:
   m_ObjectHideFlags: 0

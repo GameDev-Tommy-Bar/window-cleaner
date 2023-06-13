@@ -366,7 +366,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 312886526}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1518510534}
+        m_TargetAssemblyTypeName: load_chapter, Assembly-CSharp
+        m_MethodName: load_level
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &312886526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,7 +1552,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 920112491}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1309628708}
+        m_TargetAssemblyTypeName: load_chapter, Assembly-CSharp
+        m_MethodName: load_level
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &920112491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2238,7 +2262,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1342129981}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1868452774}
+        m_TargetAssemblyTypeName: load_chapter, Assembly-CSharp
+        m_MethodName: load_level
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1342129981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2360,7 +2396,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1437967027}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1623648687}
+        m_TargetAssemblyTypeName: load_chapter, Assembly-CSharp
+        m_MethodName: load_level
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1437967027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2554,6 +2602,7 @@ GameObject:
   - component: {fileID: 1518510531}
   - component: {fileID: 1518510533}
   - component: {fileID: 1518510532}
+  - component: {fileID: 1518510534}
   m_Layer: 5
   m_Name: chapter6
   m_TagString: Untagged
@@ -2621,6 +2670,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1518510530}
   m_CullTransparentMesh: 1
+--- !u!114 &1518510534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518510530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18321a19a687e0640b06616d163584d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_chapter: 1
+  chapter_name: day 6
+  level_lock: {fileID: 2047796079}
 --- !u!1 &1623648683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2790,7 @@ GameObject:
   - component: {fileID: 1868452771}
   - component: {fileID: 1868452773}
   - component: {fileID: 1868452772}
+  - component: {fileID: 1868452774}
   m_Layer: 5
   m_Name: chapter5
   m_TagString: Untagged
@@ -2793,6 +2858,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868452770}
   m_CullTransparentMesh: 1
+--- !u!114 &1868452774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868452770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18321a19a687e0640b06616d163584d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_chapter: 1
+  chapter_name: day 5
+  level_lock: {fileID: 70816525}
 --- !u!1 &1918456586
 GameObject:
   m_ObjectHideFlags: 0

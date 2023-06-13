@@ -645,6 +645,10 @@ MonoBehaviour:
   mop: 0
   dirty: 0
   total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
 --- !u!1001 &1172323106
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1100,7 +1104,8 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8335c572fdc75644498863ee247346a4, type: 3}
 --- !u!1 &1172323107 stripped
 GameObject:

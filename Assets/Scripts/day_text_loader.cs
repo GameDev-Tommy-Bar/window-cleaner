@@ -12,6 +12,7 @@ public class day_text_loader : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player_stats.lockArray[0] = false;
         win_text.text =
             player_stats.current_day
             + " Finished!\nYou made "
@@ -19,10 +20,10 @@ public class day_text_loader : MonoBehaviour
             + " points!";
         string numberString = Regex.Match(player_stats.current_day, @"\d+").Value;
         int number = int.Parse(numberString);
-        if (player_stats.lockArray[number - 1] == true)
+        if (player_stats.lockArray[number] == true)
         {
-            Debug.Log("new level unlock " + number);
-            player_stats.lockArray[number - 1] = false;
+            Debug.Log("new level unlock " + (number + 1));
+            player_stats.lockArray[number] = false;
         }
     }
 
