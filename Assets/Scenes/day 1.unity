@@ -600,6 +600,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.67
       objectReference: {fileID: 0}
+    - target: {fileID: 3882260870509964350, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882260870509964350, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
+      propertyPath: patience_time
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 3882260870509964350, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
+      propertyPath: window_manager1
+      value: 
+      objectReference: {fileID: 6412787443401602695}
+    - target: {fileID: 3882260870509964350, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
+      propertyPath: window_manager2
+      value: 
+      objectReference: {fileID: 6412787443401602695}
     - target: {fileID: 4365525070329297584, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1668,7 +1684,7 @@ PrefabInstance:
       objectReference: {fileID: 842996899}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: patience_time
-      value: 30
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: window_manager1
