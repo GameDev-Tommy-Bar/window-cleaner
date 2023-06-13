@@ -15,8 +15,11 @@ public class get_points : MonoBehaviour
     public bool sponge;
     public bool mop;
     public bool dirty;
-
     public bool total_windows;
+    public bool shop_show_mop;
+    public bool shop_show_sponge;
+    public bool shop_show_speed;
+    public bool shop_show_dirt;
 
     void Start() { }
 
@@ -51,6 +54,22 @@ public class get_points : MonoBehaviour
         {
             dirt_delay();
         }
+        if (shop_show_sponge)
+        {
+            shop_sponge();
+        }
+        if (shop_show_mop)
+        {
+            shop_mop();
+        }
+        if (shop_show_speed)
+        {
+            shop_speed();
+        }
+        if (shop_show_dirt)
+        {
+            shop_dirt();
+        }
     }
 
     void update_score()
@@ -66,7 +85,7 @@ public class get_points : MonoBehaviour
 
     void cable_speed_up()
     {
-        txt = "" + player_stats.cable_speed_add + " cables speed up";
+        txt = "" + player_stats.cable_speed_add.ToString("f2") + " cables speed up";
         scoreText.text = txt;
     }
 
@@ -78,19 +97,43 @@ public class get_points : MonoBehaviour
 
     void sponge_time()
     {
-        txt = "" + player_stats.mud_fade_duration + " sponge cleaning duration";
+        txt = "" + player_stats.mud_fade_duration.ToString("f2") + " sponge cleaning duration";
         scoreText.text = txt;
     }
 
     void mop_time()
     {
-        txt = "" + player_stats.bubbles_fade_duration + " mop cleaning duration";
+        txt = "" + player_stats.bubbles_fade_duration.ToString("f2") + " mop cleaning duration";
         scoreText.text = txt;
     }
 
     void dirt_delay()
     {
-        txt = "" + player_stats.dirt_delay + " dirt delay";
+        txt = "" + player_stats.dirt_delay.ToString("f2") + " dirt delay";
+        scoreText.text = txt;
+    }
+
+    void shop_mop()
+    {
+        txt = "current " + player_stats.bubbles_fade_duration.ToString("f2");
+        scoreText.text = txt;
+    }
+
+    void shop_sponge()
+    {
+        txt = "current " + player_stats.mud_fade_duration.ToString("f2");
+        scoreText.text = txt;
+    }
+
+    void shop_speed()
+    {
+        txt = "current " + player_stats.cable_speed_add.ToString("f2");
+        scoreText.text = txt;
+    }
+
+    void shop_dirt()
+    {
+        txt = "current " + player_stats.dirt_delay.ToString("f2");
         scoreText.text = txt;
     }
 }
