@@ -2554,7 +2554,7 @@ PrefabInstance:
       objectReference: {fileID: 842996899}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: patience_time
-      value: 48
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: window_manager1
