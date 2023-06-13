@@ -1010,7 +1010,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: time
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6412787443968660652, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_LocalScale.y
@@ -2304,7 +2304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2399440399530674744, guid: 49310fdde791df94f8e6171c9a0f9c4f, type: 3}
       propertyPath: time
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2399440399530674745, guid: 49310fdde791df94f8e6171c9a0f9c4f, type: 3}
       propertyPath: bar
@@ -2312,7 +2312,7 @@ PrefabInstance:
       objectReference: {fileID: 842996899}
     - target: {fileID: 2399440399530674745, guid: 49310fdde791df94f8e6171c9a0f9c4f, type: 3}
       propertyPath: patience_time
-      value: 50
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 2399440399530674745, guid: 49310fdde791df94f8e6171c9a0f9c4f, type: 3}
       propertyPath: window_manager1
