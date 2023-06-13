@@ -5,8 +5,7 @@
 #### שחקו כמה שיותר כדי להשתפר ולהפוך למנקה חלונות הבניינים הטוב בעולם
 #### [לעוד פרטים](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/main/elements.md)
 #### משחקים בעזרת מקשי החיצים כדי לזוז
-#### מחליפים את ציוד הניקיון באמצעות המקשים הבאים
-#### sponge - x, mop - c, money bag - v, nothing - z
+#### מחליפים את ציוד הניקיון באמצעות המקש TAB
 #### [שחקו במשחק](https://tommy-bar.itch.io/windows-cleaner)
 ![pic1](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/b33dacd1f1c2cd8b9795f8d4d52de9ebaf030113/Assets/Pics/1.PNG)
 ![pic2](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/b33dacd1f1c2cd8b9795f8d4d52de9ebaf030113/Assets/Pics/2.PNG)
