@@ -24,10 +24,11 @@ public class tutorial : MonoBehaviour
     public bool drop_cable_touch = false;
     public bool cable_touch = false;
     public bool move_start = false;
-    private string open_text = "Hey new player\nWelcome to your new job\nas window cleaner!";
+    private string open_text =
+        "Hey new player\nWelcome to your new job\nas window cleaner!\nyour mission is clean\nthe building";
     private string first_hint = "Hurry up!\nClimb the building\nand start cleaning!!";
     private string change_items =
-        "Your tools are:\nMop, Sponge, and Money bag.\nChange them with 'Tab' key";
+        "Your tools are:\nMop, Sponge, and Money bag.\nChange them with\n'Tab' key";
     private string patience_bar =
         "See the patience bar\nat the top left.\nWhen the building is dirty\nthe boss is getting mad!";
     private string drop_cable =
@@ -62,7 +63,7 @@ public class tutorial : MonoBehaviour
 
     private IEnumerator hint1()
     {
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(10f);
         cables.SetActive(true);
         cables_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = first_hint;
@@ -73,7 +74,7 @@ public class tutorial : MonoBehaviour
 
     private IEnumerator hint2()
     {
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         tutorial_text.text = change_items;
         cables_arrow.GetComponent<SpriteRenderer>().enabled = false;
         StartCoroutine(hint3());
@@ -92,19 +93,19 @@ public class tutorial : MonoBehaviour
 
     private IEnumerator hint4()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(10f);
         bar_arrow.GetComponent<SpriteRenderer>().enabled = false;
         cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = drop_cable;
         cable_drop.SetActive(true);
         //drop_cable_touch = false;
-        cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = false;
+        cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = true;
         StartCoroutine(goodluck());
     }
 
     private IEnumerator EmptyText()
     {
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(10f);
         background.GetComponent<SpriteRenderer>().enabled = false;
         txt.SetActive(false);
         health_bar.GetComponent<p_bar>().increaseFull();
@@ -112,7 +113,7 @@ public class tutorial : MonoBehaviour
 
     private IEnumerator goodluck()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(10);
         tutorial_text.text = "GOOD LUCK!\n survive the day!";
         StartCoroutine(EmptyText());
     }
