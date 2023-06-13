@@ -22,11 +22,11 @@ public class lock_manager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lock2.SetActive(player_stats.lockArray[0]);
-        lock3.SetActive(player_stats.lockArray[1]);
-        lock4.SetActive(player_stats.lockArray[2]);
-        lock5.SetActive(player_stats.lockArray[3]);
-        lock6.SetActive(player_stats.lockArray[4]);
+        lock2.SetActive(player_stats.lockArray[1]);
+        lock3.SetActive(player_stats.lockArray[2]);
+        lock4.SetActive(player_stats.lockArray[3]);
+        lock5.SetActive(player_stats.lockArray[4]);
+        lock6.SetActive(player_stats.lockArray[5]);
     }
 
     // Update is called once per frame

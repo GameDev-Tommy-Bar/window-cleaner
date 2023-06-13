@@ -15,7 +15,7 @@ public class player_stats : MonoBehaviour
     public static float dirt_delay = 0;
     public static string current_day;
     public static int max_level = 1;
-    public static bool[] lockArray = Enumerable.Repeat(true, 5).ToArray();
+    public static bool[] lockArray = Enumerable.Repeat(true, 6).ToArray();
 
     public void change_score(float new_score)
     {
