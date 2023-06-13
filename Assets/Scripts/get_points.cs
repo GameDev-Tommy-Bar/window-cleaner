@@ -66,7 +66,7 @@ public class get_points : MonoBehaviour
 
     void cable_speed_up()
     {
-        txt = "" + player_stats.cable_speed_add + " cables speed up";
+        txt = "" + player_stats.cable_speed_add.ToString("f2") + " cables speed up";
         scoreText.text = txt;
     }
 
@@ -78,19 +78,19 @@ public class get_points : MonoBehaviour
 
     void sponge_time()
     {
-        txt = "" + player_stats.mud_fade_duration + " sponge cleaning duration";
+        txt = "" + player_stats.mud_fade_duration.ToString("f2") + " sponge cleaning duration";
         scoreText.text = txt;
     }
 
     void mop_time()
     {
-        txt = "" + player_stats.bubbles_fade_duration + " mop cleaning duration";
+        txt = "" + player_stats.bubbles_fade_duration.ToString("f2") + " mop cleaning duration";
         scoreText.text = txt;
     }
 
     void dirt_delay()
     {
-        txt = "" + player_stats.dirt_delay + " dirt delay";
+        txt = "" + player_stats.dirt_delay.ToString("f2") + " dirt delay";
         scoreText.text = txt;
     }
 }

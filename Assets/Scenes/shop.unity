@@ -772,6 +772,10 @@ MonoBehaviour:
   update_player_score: 1
   update_cable_speed: 0
   score_num: 0
+  sponge: 0
+  mop: 0
+  dirty: 0
+  total_windows: 0
 --- !u!1 &387320944
 GameObject:
   m_ObjectHideFlags: 0
@@ -783,6 +787,7 @@ GameObject:
   - component: {fileID: 387320945}
   - component: {fileID: 387320947}
   - component: {fileID: 387320946}
+  - component: {fileID: 387320948}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -907,6 +912,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387320944}
   m_CullTransparentMesh: 1
+--- !u!114 &387320948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387320944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479915eb406e4514d94a1332fac049f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 387320946}
+  update_player_score: 0
+  update_cable_speed: 0
+  score_num: 0
+  sponge: 0
+  mop: 0
+  dirty: 1
+  total_windows: 0
 --- !u!1 &430390172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1442,7 @@ GameObject:
   - component: {fileID: 499986932}
   - component: {fileID: 499986934}
   - component: {fileID: 499986933}
+  - component: {fileID: 499986935}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1541,6 +1567,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 499986931}
   m_CullTransparentMesh: 1
+--- !u!114 &499986935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 499986931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479915eb406e4514d94a1332fac049f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 499986933}
+  update_player_score: 0
+  update_cable_speed: 0
+  score_num: 0
+  sponge: 0
+  mop: 1
+  dirty: 0
+  total_windows: 0
 --- !u!1 &520158967
 GameObject:
   m_ObjectHideFlags: 0
@@ -1755,6 +1801,7 @@ GameObject:
   - component: {fileID: 914810734}
   - component: {fileID: 914810736}
   - component: {fileID: 914810735}
+  - component: {fileID: 914810737}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1879,6 +1926,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914810733}
   m_CullTransparentMesh: 1
+--- !u!114 &914810737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914810733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479915eb406e4514d94a1332fac049f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  update_player_score: 0
+  update_cable_speed: 0
+  score_num: 0
+  sponge: 1
+  mop: 0
+  dirty: 0
+  total_windows: 0
 --- !u!1 &1010727851
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,15 +3102,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1644430849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75871c3b1d39df8488d57e82f5137d28, type: 3}
+  m_Script: {fileID: 11500000, guid: 479915eb406e4514d94a1332fac049f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt: {fileID: 0}
-  cable_speed: 0
-  mop_speed: 0
-  sponge_speed: 0
-  dirt_speed: 0
-  value: 0
+  scoreText: {fileID: 1644430851}
+  update_player_score: 0
+  update_cable_speed: 1
+  score_num: 0
+  sponge: 0
+  mop: 0
+  dirty: 0
+  total_windows: 0
 --- !u!1 &1764802070
 GameObject:
   m_ObjectHideFlags: 0
@@ -3814,6 +3883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   is_chapter: 0
   chapter_name: main_screen
+  level_lock: {fileID: 0}
 --- !u!114 &2003773959
 MonoBehaviour:
   m_ObjectHideFlags: 0
