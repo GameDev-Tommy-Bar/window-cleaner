@@ -8,16 +8,6 @@ using UnityEngine;
 public class mover : MonoBehaviour
 {
     public GameObject pause_menu;
-    //public GameObject birdSpawnner;
-
-    // [SerializeField]
-    // GameObject cables;
-
-    // [SerializeField]
-    //Vector3 playerPosOnBuilding;
-
-    //[SerializeField]
-    //GameObject drop_player;
 
     [SerializeField]
     public float speed = 3f;
@@ -29,10 +19,6 @@ public class mover : MonoBehaviour
     public float moveX;
     public float moveY;
     public bool onBuilding = false;
-    // GameObject cable1;
-    // GameObject cable2;
-    // float cable1_freezeY = 0.2f;
-    // float cable2_freezeY = 0.2f;
 
     [SerializeField]
     GameObject footStepsSound;
@@ -43,7 +29,6 @@ public class mover : MonoBehaviour
     public AudioSource building_sound;
     private float curr_speed;
     public float slow_time = 3f;
-  
 
     /*
         * This function is called when the game starts
@@ -53,8 +38,6 @@ public class mover : MonoBehaviour
     {
         steps_sound = footStepsSound.GetComponent<AudioSource>();
         building_sound = buildingSoud.GetComponent<AudioSource>();
-        // cable1 = cables.transform.Find("cable1").gameObject;
-        // cable2 = cables.transform.Find("cable2").gameObject;
     }
 
     /*
@@ -86,17 +69,10 @@ public class mover : MonoBehaviour
         Debug.Log("triggered " + other.tag);
         if (other.tag == "cable")
         {
-           // birdSpawnner.SetActive(true);
             gameObject.GetComponent<Animator>().enabled = false;
             hat.GetComponent<SpriteRenderer>().enabled = true;
             onBuilding = true;
-            // cables.GetComponent<player_follower>().following = true;
-            // i want the transrom position on the building will effect only on y axis and on corrent y -2.0
             transform.position = new Vector3(transform.position.x, -3.2f, transform.position.z);
-            //transform.position = playerPosOnBuilding;
-           // drop_player.GetComponent<CircleCollider2D>().enabled = true;
-           // GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = true;
-            //GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = true;
         }
         if (other.tag == "enemy")
         {
@@ -194,20 +170,6 @@ public class mover : MonoBehaviour
         {
             FlipPlayer();
         }
-        // if (moveY != 0)
-        // {
-        //     cable1.transform.position = new Vector3(
-        //         cable1.transform.position.x,
-        //         cable1_freezeY,
-        //         cable1.transform.position.z
-        //     );
-        //     cable2.transform.position = new Vector3(
-        //         cable2.transform.position.x,
-        //         cable2_freezeY,
-        //         cable2.transform.position.z
-        //     );
-        // }
-
         gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(
             moveX * curr_speed,
             moveY * curr_speed

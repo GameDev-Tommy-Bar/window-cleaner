@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class puse_script : MonoBehaviour
 {
+    // this script handle the pause screen
     public GameObject pause_panel;
     public GameObject player;
 
-    // Start is called before the first frame update
     public void Pause()
     {
         pause_panel.SetActive(true);
@@ -19,10 +19,5 @@ public class puse_script : MonoBehaviour
     {
         pause_panel.SetActive(false);
         Time.timeScale = 1f;
-
-        //player.GetComponent<mover>().steps_sound.Play();
     }
-
-    // Update is called once per frame
-    void Update() { }
 }

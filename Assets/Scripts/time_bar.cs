@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class time_bar : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //this script handle the level timer component
     public GameObject end_game;
 
     [SerializeField]
@@ -22,9 +22,6 @@ public class time_bar : MonoBehaviour
     {
         Being(duration);
     }
-
-    // Update is called once per frame
-    void Update() { }
 
     private void Being(int second)
     {

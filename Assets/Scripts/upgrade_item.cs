@@ -5,6 +5,7 @@ using TMPro;
 
 public class upgrade_item : MonoBehaviour
 {
+    // this script handle the power ups upgrade shop
     public float amount_to_add = 0.1f;
 
     public void buy_cable_speed()

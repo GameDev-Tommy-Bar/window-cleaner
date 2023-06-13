@@ -6,13 +6,14 @@ using System.Text.RegularExpressions;
 
 public class day_text_loader : MonoBehaviour
 {
+    // this script used for set the text and unlock level when the end day screen appear
     [SerializeField]
     TMP_Text win_text;
 
     // Start is called before the first frame update
     void Start()
     {
-        player_stats.lockArray[0] = false;
+        player_stats.lockArray[0] = false; // set the first lock to false -- level 1 open
         win_text.text =
             player_stats.current_day
             + " Finished!\nYou made "

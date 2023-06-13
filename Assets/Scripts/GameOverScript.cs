@@ -7,6 +7,7 @@ using System;
 
 public class GameOverScript : MonoBehaviour
 {
+    //this script handle the Game Over screen
     public TMP_Text points_text;
     public TMP_Text score_text;
 

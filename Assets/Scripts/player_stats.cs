@@ -5,7 +5,7 @@ using System.Linq;
 
 public class player_stats : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // this class contain the player stats
     public static float score = 0;
     public static float cable_speed_add = 0;
     public static float mud_fade_duration = 1f;

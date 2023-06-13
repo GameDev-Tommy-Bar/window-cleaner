@@ -11,6 +11,7 @@ public class cable_drop : MonoBehaviour
 {
     // Start is called before the first frame update
     public GameObject birdSpawnner;
+
     [SerializeField]
     Vector3 cable_origin_pos;
 
@@ -36,6 +37,7 @@ public class cable_drop : MonoBehaviour
 
     // Update is called once per frame
     void Update() { }
+
     /*
         * This function is called when the player enters the drop zone
         * It resets the player's position and the cable's position
@@ -45,7 +47,7 @@ public class cable_drop : MonoBehaviour
     */
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && player.GetComponent<mover>().onBuilding )
+        if (other.CompareTag("Player") && player.GetComponent<mover>().onBuilding)
         {
             birdSpawnner.SetActive(false);
             cables.GetComponent<player_follower>().following = false;
@@ -54,8 +56,6 @@ public class cable_drop : MonoBehaviour
             player.transform.position = player_origin_pos;
             player.GetComponent<mover>().onBuilding = false;
             hat.GetComponent<SpriteRenderer>().enabled = false;
-            // GameObject.Find("rightwall").GetComponent<BoxCollider2D>().enabled = false;
-            // GameObject.Find("leftwall").GetComponent<BoxCollider2D>().enabled = false;
             border.SetActive(false);
         }
     }

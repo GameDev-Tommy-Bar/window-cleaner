@@ -5,7 +5,7 @@ using TMPro;
 
 public class get_points : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // this script is for handle the presented text in the text meshes
     public TMP_Text scoreText;
     string txt;
     string str;

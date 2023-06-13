@@ -49,16 +49,12 @@ public class cleaning_status : MonoBehaviour
     {
         if (other.tag == "sponge" && is_mud)
         {
-            //mud.GetComponent<SpriteRenderer>().enabled = false;
-            //bubbles.GetComponent<SpriteRenderer>().enabled = true;
             is_mud = false;
             dirty = true;
             StartCoroutine(mud_fade_out());
         }
         if (other.tag == "mop" && is_bubbled)
         {
-            //mud.GetComponent<fadeOut>().isFading = false;
-            //bubbles.GetComponent<SpriteRenderer>().enabled = false;
             is_mud = false;
             StartCoroutine(bubbles_fade_out());
         }

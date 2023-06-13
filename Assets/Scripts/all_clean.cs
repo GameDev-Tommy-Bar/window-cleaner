@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 /*
 this func is used to check if all windows are cleaned
 */
@@ -13,6 +14,7 @@ public class all_clean : MonoBehaviour
 
     [SerializeField]
     bool andOperator;
+
     void Start()
     {
         parentTransform = GetComponent<Transform>();

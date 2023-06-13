@@ -291,6 +291,18 @@ MonoBehaviour:
   update_player_score: 1
   update_cable_speed: 0
   score_num: 0
+  sponge: 0
+  mop: 0
+  dirty: 0
+  total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!4 &166495407
 Transform:
   m_ObjectHideFlags: 0
@@ -1058,6 +1070,18 @@ MonoBehaviour:
   update_player_score: 0
   update_cable_speed: 0
   score_num: 0
+  sponge: 0
+  mop: 0
+  dirty: 0
+  total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!1 &1641174036
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,6 +1231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   is_chapter: 0
   chapter_name: shop
+  level_lock: {fileID: 0}
 --- !u!1 &1706515353
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,6 +1473,7 @@ GameObject:
   - component: {fileID: 1965091182}
   - component: {fileID: 1965091181}
   - component: {fileID: 1965091180}
+  - component: {fileID: 1965091183}
   m_Layer: 5
   m_Name: play_button
   m_TagString: Untagged
@@ -1520,9 +1546,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1706515357}
-        m_TargetAssemblyTypeName: main_screen_manage, Assembly-CSharp
-        m_MethodName: playButton
+      - m_Target: {fileID: 1965091183}
+        m_TargetAssemblyTypeName: load_chapter, Assembly-CSharp
+        m_MethodName: load_level
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1570,6 +1596,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965091178}
   m_CullTransparentMesh: 1
+--- !u!114 &1965091183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965091178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18321a19a687e0640b06616d163584d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  is_chapter: 0
+  chapter_name: chapters
+  level_lock: {fileID: 0}
 --- !u!1 &2116148146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1625,6 +1666,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   is_chapter: 0
   chapter_name: stats
+  level_lock: {fileID: 0}
 --- !u!114 &2116148149
 MonoBehaviour:
   m_ObjectHideFlags: 0

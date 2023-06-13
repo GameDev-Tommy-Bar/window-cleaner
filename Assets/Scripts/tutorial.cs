@@ -67,8 +67,6 @@ public class tutorial : MonoBehaviour
         cables.SetActive(true);
         cables_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = first_hint;
-        // cable_border.SetActive(true);
-
         StartCoroutine(hint2());
     }
 
@@ -98,7 +96,6 @@ public class tutorial : MonoBehaviour
         cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = drop_cable;
         cable_drop.SetActive(true);
-        //drop_cable_touch = false;
         cable_drop_arrow.GetComponent<SpriteRenderer>().enabled = true;
         StartCoroutine(goodluck());
     }

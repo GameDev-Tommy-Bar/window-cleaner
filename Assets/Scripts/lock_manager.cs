@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class lock_manager : MonoBehaviour
 {
+    // this script used for handle the level locks
     [SerializeField]
     GameObject lock2;
 

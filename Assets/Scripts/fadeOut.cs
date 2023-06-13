@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class fadeOut : MonoBehaviour
 {
+    // this script is used for fade out the mud and the bubles from the windows
+
     public float fadeDuration = 3f; // Time in seconds to fade out the game object
     private float fadeProgress = 0f;
     public float fadeSpeed; // Speed at which the object fades out
@@ -10,6 +12,7 @@ public class fadeOut : MonoBehaviour
     public bool faded_in = true;
 
     public bool mud = true;
+    float max_size = 1f;
 
     private void Start()
     {
@@ -29,7 +32,7 @@ public class fadeOut : MonoBehaviour
     {
         if (!isFadedOut)
         {
-            if (fadeProgress < 1f)
+            if (fadeProgress < max_size)
             {
                 fadeProgress += Time.deltaTime / fadeDuration;
                 UpdateObjectAppearance();

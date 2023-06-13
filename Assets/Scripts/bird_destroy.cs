@@ -18,19 +18,5 @@ public class bird_destroy : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        // if (other.gameObject.tag == "player")
-        // {
-        //     Debug.Log("player");
-        //     Destroy(this.gameObject);
-        //     StartCoroutine(speed_change());
-        // }
     }
-
-    // private IEnumerator speed_change()
-    // {
-    //     float speed = player.GetComponent<mover>().speed;
-    //     player.GetComponent<mover>().speed = speed / 2;
-    //     yield return new WaitForSeconds(3);
-    //     player.GetComponent<mover>().speed = speed;
-    // }
 }

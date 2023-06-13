@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class destroy_hint : MonoBehaviour
 {
+    // this script is used for remove bird hint in level 3 after 10 seconds
     // Start is called before the first frame update
+    float time = 10f;
+
     void Start()
     {
         StartCoroutine(remove_hint());
@@ -15,7 +18,7 @@ public class destroy_hint : MonoBehaviour
 
     private IEnumerator remove_hint()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(time);
         Destroy(gameObject);
     }
 }
