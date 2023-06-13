@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   is_chapter: 0
   chapter_name: main_screen
+  level_lock: {fileID: 0}
 --- !u!1 &38719147
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +466,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: add coins
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -601,6 +602,14 @@ MonoBehaviour:
   mop: 0
   dirty: 0
   total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!114 &428691614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +944,14 @@ MonoBehaviour:
   mop: 1
   dirty: 0
   total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!114 &879420296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,7 +1163,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -245.7, y: -154.27}
+  m_AnchoredPosition: {x: -317, y: -208.6}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024666081
@@ -1230,7 +1247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1314,6 +1331,14 @@ MonoBehaviour:
   mop: 0
   dirty: 1
   total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!114 &1092266118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1470,6 +1495,14 @@ MonoBehaviour:
   mop: 0
   dirty: 0
   total_windows: 1
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!114 &1338524242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1845,6 +1878,14 @@ MonoBehaviour:
   mop: 0
   dirty: 0
   total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!114 &1830939229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2001,6 +2042,14 @@ MonoBehaviour:
   mop: 0
   dirty: 0
   total_windows: 0
+  shop_show_mop: 0
+  shop_show_sponge: 0
+  shop_show_speed: 0
+  shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!114 &2022569635
 MonoBehaviour:
   m_ObjectHideFlags: 0
