@@ -17,7 +17,10 @@ public class update_bar : MonoBehaviour
     float time_to_wait = 1f;
 
     [SerializeField]
-    GameObject windows_manager;
+    GameObject window_manager1;
+
+    [SerializeField]
+    GameObject window_manager2;
     bool dirty = true;
     float maxTime;
     bool coroutineRunning = false;
@@ -33,7 +36,10 @@ public class update_bar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dirty = !windows_manager.GetComponent<all_clean>().all_cleaned;
+        dirty = !(
+            window_manager1.GetComponent<all_clean>().all_cleaned
+            && window_manager2.GetComponent<all_clean>().all_cleaned
+        );
         //Debug.Log("they dirty? "+dirty );
         //bar.GetComponent<p_bar>().UpdatePBar(0.1f);
         if (dirty && !coroutineRunning)

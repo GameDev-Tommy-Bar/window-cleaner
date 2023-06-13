@@ -584,6 +584,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6412787444678717599, guid: 8335c572fdc75644498863ee247346a4, type: 3}
   m_PrefabInstance: {fileID: 1172323106}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &709001066 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6412787443783641177, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+  m_PrefabInstance: {fileID: 6412787443401602694}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &752135031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6412787444678717599, guid: 8335c572fdc75644498863ee247346a4, type: 3}
@@ -949,6 +954,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 842996899}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: patience_time
       value: 30
       objectReference: {fileID: 0}
@@ -1096,7 +1105,8 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8335c572fdc75644498863ee247346a4, type: 3}
 --- !u!224 &1197929351 stripped
 RectTransform:
@@ -1106,6 +1116,11 @@ RectTransform:
 --- !u!1 &1203705061 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6412787444185689768, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+  m_PrefabInstance: {fileID: 1172323106}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1223395218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6412787443783641177, guid: 8335c572fdc75644498863ee247346a4, type: 3}
   m_PrefabInstance: {fileID: 1172323106}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1322857829
@@ -2192,8 +2207,16 @@ PrefabInstance:
       objectReference: {fileID: 842996899}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: patience_time
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: window_manager1
+      value: 
+      objectReference: {fileID: 709001066}
+    - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: window_manager2
+      value: 
+      objectReference: {fileID: 1223395218}
     - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: max_time
       value: 3
