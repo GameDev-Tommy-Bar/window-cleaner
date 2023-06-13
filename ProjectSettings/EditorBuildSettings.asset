@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/stats.unity
     guid: b7c282a5d48ece4428e1c14a381513e3
   - enabled: 1
-    path: Assets/Scenes/day 3.unity
+    path: Assets/Scenes/4.unity
     guid: 991a34d1d11c3024ba3ca91887990049
   - enabled: 1
     path: Assets/Scenes/win.unity

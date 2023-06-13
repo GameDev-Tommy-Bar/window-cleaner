@@ -604,6 +604,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4365525070967225412, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
   m_PrefabInstance: {fileID: 1466089542}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &842996903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842996899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0903f64b239e05a4ba4494c2a83fed00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patience_time: 60
+  bar: {fileID: 842996899}
+  time_to_wait: 1
+  windows_manager: {fileID: 1722411844}
 --- !u!1 &970839285 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6412787444947489887, guid: 8335c572fdc75644498863ee247346a4, type: 3}
@@ -949,6 +965,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 842996899}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: patience_time
       value: 30
       objectReference: {fileID: 0}
@@ -1024,6 +1044,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6798187759975678727}
+    - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: birdsOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: building
       value: 
@@ -1385,6 +1409,14 @@ PrefabInstance:
       propertyPath: score_text
       value: 
       objectReference: {fileID: 206904747}
+    - target: {fileID: 4365525070967225418, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
+      propertyPath: m_Value
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4365525070967225418, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
+      propertyPath: m_MaxValue
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4365525070967225419, guid: e7c551d57e4f1be488349faa148ba713, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.7
@@ -1471,6 +1503,11 @@ GameObject:
 --- !u!1 &1635739402 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8883146741250470723, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+  m_PrefabInstance: {fileID: 6412787443401602694}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1722411844 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6412787443783641177, guid: 8335c572fdc75644498863ee247346a4, type: 3}
   m_PrefabInstance: {fileID: 6412787443401602694}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1904182639 stripped
@@ -2191,6 +2228,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 842996899}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: patience_time
       value: 30
       objectReference: {fileID: 0}
@@ -2258,6 +2299,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 6798187759975678727}
+    - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: birdsOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: building
       value: 
