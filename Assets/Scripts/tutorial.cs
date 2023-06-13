@@ -27,7 +27,7 @@ public class tutorial : MonoBehaviour
     private string open_text = "Hey new player\nWelcome to your new job\nas window cleaner!";
     private string first_hint = "Hurry up!\nClimb the building\nand start cleaning!!";
     private string change_items =
-        "Your tools are:\nMop, Sponge, and Money bag.\nChange them with 'Z', 'X', 'C', 'V' keys";
+        "Your tools are:\nMop, Sponge, and Money bag.\nChange them with 'Tab' key";
     private string patience_bar =
         "See the patience bar\nat the top left.\nWhen the building is dirty\nthe boss is getting mad!";
     private string drop_cable =
@@ -79,6 +79,7 @@ public class tutorial : MonoBehaviour
         StartCoroutine(hint3());
         cable_touch = false;
     }
+
     private IEnumerator hint3()
     {
         yield return new WaitForSeconds(10f);

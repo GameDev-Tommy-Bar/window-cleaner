@@ -567,6 +567,10 @@ MonoBehaviour:
   shop_show_sponge: 0
   shop_show_speed: 0
   shop_show_dirt: 0
+  dirt_cost_text: 0
+  mop_cost_text: 0
+  sponge_cost_text: 0
+  speed_cost_text: 0
 --- !u!224 &1197929351 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4637485684370208781, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
@@ -1700,6 +1704,10 @@ PrefabInstance:
       propertyPath: window_manager2
       value: 
       objectReference: {fileID: 6412787443401602695}
+    - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: time
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: max_time
       value: 3

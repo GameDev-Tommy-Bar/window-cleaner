@@ -20,6 +20,10 @@ public class get_points : MonoBehaviour
     public bool shop_show_sponge;
     public bool shop_show_speed;
     public bool shop_show_dirt;
+    public bool dirt_cost_text;
+    public bool mop_cost_text;
+    public bool sponge_cost_text;
+    public bool speed_cost_text;
 
     void Start() { }
 
@@ -70,6 +74,22 @@ public class get_points : MonoBehaviour
         {
             shop_dirt();
         }
+        if (speed_cost_text)
+        {
+            cost_speed();
+        }
+        if (sponge_cost_text)
+        {
+            cost_sponge();
+        }
+        if (mop_cost_text)
+        {
+            cost_mop();
+        }
+        if (dirt_cost_text)
+        {
+            cost_dirt();
+        }
     }
 
     void update_score()
@@ -80,7 +100,7 @@ public class get_points : MonoBehaviour
 
     void update_score_only_numbers()
     {
-        scoreText.text = "" + player_stats.score;
+        scoreText.text = "" + player_stats.score + "$";
     }
 
     void cable_speed_up()
@@ -134,6 +154,30 @@ public class get_points : MonoBehaviour
     void shop_dirt()
     {
         txt = "current " + player_stats.dirt_delay.ToString("f2");
+        scoreText.text = txt;
+    }
+
+    void cost_mop()
+    {
+        txt = "cost " + player_stats.mop_cost.ToString();
+        scoreText.text = txt;
+    }
+
+    void cost_sponge()
+    {
+        txt = "cost " + player_stats.sponge_cost.ToString();
+        scoreText.text = txt;
+    }
+
+    void cost_speed()
+    {
+        txt = "cost " + player_stats.speed_cost.ToString();
+        scoreText.text = txt;
+    }
+
+    void cost_dirt()
+    {
+        txt = "cost " + player_stats.dirt_delay_cost.ToString();
         scoreText.text = txt;
     }
 }
