@@ -1465,6 +1465,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6798187759975678727}
     - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: birdsOn
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: building
       value: 
       objectReference: {fileID: 114070889}
@@ -1472,6 +1476,10 @@ PrefabInstance:
       propertyPath: drop_player
       value: 
       objectReference: {fileID: 785143854}
+    - target: {fileID: 6412787444947489883, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: birdSpawnner
+      value: 
+      objectReference: {fileID: 1598143888}
     - target: {fileID: 6412787445246146264, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_Enabled
       value: 1

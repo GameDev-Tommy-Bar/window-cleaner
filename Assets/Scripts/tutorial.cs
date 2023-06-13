@@ -66,7 +66,7 @@ public class tutorial : MonoBehaviour
         cables.SetActive(true);
         cables_arrow.GetComponent<SpriteRenderer>().enabled = true;
         tutorial_text.text = first_hint;
-        cable_border.SetActive(true);
+        // cable_border.SetActive(true);
 
         StartCoroutine(hint2());
     }
@@ -79,7 +79,6 @@ public class tutorial : MonoBehaviour
         StartCoroutine(hint3());
         cable_touch = false;
     }
-
     private IEnumerator hint3()
     {
         yield return new WaitForSeconds(10f);
