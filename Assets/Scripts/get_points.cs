@@ -15,8 +15,11 @@ public class get_points : MonoBehaviour
     public bool sponge;
     public bool mop;
     public bool dirty;
-
     public bool total_windows;
+    public bool shop_show_mop;
+    public bool shop_show_sponge;
+    public bool shop_show_speed;
+    public bool shop_show_dirt;
 
     void Start() { }
 
@@ -50,6 +53,22 @@ public class get_points : MonoBehaviour
         if (dirty)
         {
             dirt_delay();
+        }
+        if (shop_show_sponge)
+        {
+            shop_sponge();
+        }
+        if (shop_show_mop)
+        {
+            shop_mop();
+        }
+        if (shop_show_speed)
+        {
+            shop_speed();
+        }
+        if (shop_show_dirt)
+        {
+            shop_dirt();
         }
     }
 
@@ -91,6 +110,30 @@ public class get_points : MonoBehaviour
     void dirt_delay()
     {
         txt = "" + player_stats.dirt_delay.ToString("f2") + " dirt delay";
+        scoreText.text = txt;
+    }
+
+    void shop_mop()
+    {
+        txt = "current " + player_stats.bubbles_fade_duration.ToString("f2");
+        scoreText.text = txt;
+    }
+
+    void shop_sponge()
+    {
+        txt = "current " + player_stats.mud_fade_duration.ToString("f2");
+        scoreText.text = txt;
+    }
+
+    void shop_speed()
+    {
+        txt = "current " + player_stats.cable_speed_add.ToString("f2");
+        scoreText.text = txt;
+    }
+
+    void shop_dirt()
+    {
+        txt = "current " + player_stats.dirt_delay.ToString("f2");
         scoreText.text = txt;
     }
 }
