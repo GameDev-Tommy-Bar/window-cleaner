@@ -1102,6 +1102,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+--- !u!1 &1172323107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6412787443783641177, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+  m_PrefabInstance: {fileID: 1172323106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1197929351 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4637485684370208781, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
@@ -1232,24 +1237,6 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &1322857833
 Transform:
-<<<<<<< HEAD
-  m_CorrespondingSourceObject: {fileID: 6412787443783641190, guid: 8335c572fdc75644498863ee247346a4, type: 3}
-  m_PrefabInstance: {fileID: 1079381990}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1079381992 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6412787443783641177, guid: 8335c572fdc75644498863ee247346a4, type: 3}
-  m_PrefabInstance: {fileID: 1079381990}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1179310745 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8883146741250470723, guid: 8335c572fdc75644498863ee247346a4, type: 3}
-  m_PrefabInstance: {fileID: 1079381990}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1249582649
-PrefabInstance:
-=======
->>>>>>> 74daaeca1adc75de71d5a0fa21a132330ee24eac
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2216,7 +2203,6 @@ PrefabInstance:
       propertyPath: patience_time
       value: 30
       objectReference: {fileID: 0}
-<<<<<<< HEAD
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: window_manager1
       value: 
@@ -2224,8 +2210,7 @@ PrefabInstance:
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: window_manager2
       value: 
-      objectReference: {fileID: 1079381992}
-=======
+      objectReference: {fileID: 1172323107}
     - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: max_time
       value: 3
@@ -2238,7 +2223,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.7
       objectReference: {fileID: 0}
->>>>>>> 74daaeca1adc75de71d5a0fa21a132330ee24eac
     - target: {fileID: 6412787444185689781, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: hat
       value: 
