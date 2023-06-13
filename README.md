@@ -4,6 +4,7 @@
 #### שילוב של טכניקות ניקיון עם שמירה על הזהירות כמובן
 #### שחקו כמה שיותר כדי להשתפר ולהפוך למנקה חלונות הבניינים הטוב בעולם
 #### [לעוד פרטים](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/main/elements.md)
+#### [טריילר](https://www.youtube.com/watch?v=0c9kIRAeC-g)
 #### משחקים בעזרת מקשי החיצים כדי לזוז
 #### מחליפים את ציוד הניקיון באמצעות המקש TAB
 #### [שחקו במשחק](https://tommy-bar.itch.io/windows-cleaner)
