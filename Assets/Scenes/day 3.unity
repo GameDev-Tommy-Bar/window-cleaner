@@ -965,6 +965,10 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: time
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: max_time
       value: 3
       objectReference: {fileID: 0}
@@ -2224,6 +2228,10 @@ PrefabInstance:
       propertyPath: window_manager2
       value: 
       objectReference: {fileID: 1172323107}
+    - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: time
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: max_time
       value: 3

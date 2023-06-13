@@ -1150,6 +1150,10 @@ PrefabInstance:
       propertyPath: patience_time
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: time
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787443968660652, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_LocalScale.y
       value: 10.088252
@@ -2363,7 +2367,7 @@ PrefabInstance:
       objectReference: {fileID: 842996899}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: patience_time
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6412787443783641188, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: window_manager1
@@ -2373,6 +2377,10 @@ PrefabInstance:
       propertyPath: window_manager2
       value: 
       objectReference: {fileID: 1079381992}
+    - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: time
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787444185689781, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: hat
       value: 
@@ -2717,6 +2725,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 519420032}
     m_Modifications:
+    - target: {fileID: 4637485683920725611, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
+      propertyPath: duration
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 8145066443589301322, guid: 41e9022648821224a9f55e52bc0b7653, type: 3}
       propertyPath: m_IsActive
       value: 0

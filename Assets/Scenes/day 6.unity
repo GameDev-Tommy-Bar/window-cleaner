@@ -1008,6 +1008,10 @@ PrefabInstance:
       propertyPath: patience_time
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 6412787443783641189, guid: 8335c572fdc75644498863ee247346a4, type: 3}
+      propertyPath: time
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6412787443968660652, guid: 8335c572fdc75644498863ee247346a4, type: 3}
       propertyPath: m_LocalScale.y
       value: 10.088252
@@ -2216,10 +2220,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.97
       objectReference: {fileID: 0}
+    - target: {fileID: 473710066703832040, guid: 9d86624d2bd0d6644974feaca6e28b96, type: 3}
+      propertyPath: time
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 473710066703832041, guid: 9d86624d2bd0d6644974feaca6e28b96, type: 3}
       propertyPath: bar
       value: 
       objectReference: {fileID: 842996899}
+    - target: {fileID: 473710066703832041, guid: 9d86624d2bd0d6644974feaca6e28b96, type: 3}
+      propertyPath: patience_time
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 473710066703832041, guid: 9d86624d2bd0d6644974feaca6e28b96, type: 3}
       propertyPath: window_manager2
       value: 
