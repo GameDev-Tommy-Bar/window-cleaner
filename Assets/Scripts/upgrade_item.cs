@@ -6,7 +6,7 @@ using TMPro;
 public class upgrade_item : MonoBehaviour
 {
     // this script handle the Power Ups upgrade shop
-    public float cost_factor = 2f;
+    public float cost_factor = 1.5f;
     public float amount_to_add = 0.1f;
     float sponge_counter = 0f;
     float speed_counter = 0f;
