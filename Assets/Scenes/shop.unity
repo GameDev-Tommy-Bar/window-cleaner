@@ -481,7 +481,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03ac659182b3074198cfd4dd02cd5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost_factor: 1.5
   amount_to_add: 0.1
+  increase_rate: 5
 --- !u!1 &270695076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,7 +1471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03ac659182b3074198cfd4dd02cd5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cost_factor: 1.5
   amount_to_add: 0.1
+  increase_rate: 5
 --- !u!1 &499986931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3167,7 +3171,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03ac659182b3074198cfd4dd02cd5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount_to_add: 0.01
+  cost_factor: 1.5
+  amount_to_add: 0.02
+  increase_rate: 5
 --- !u!1 &1517777044
 GameObject:
   m_ObjectHideFlags: 0
@@ -3421,7 +3427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f03ac659182b3074198cfd4dd02cd5cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount_to_add: 0.01
+  cost_factor: 1.5
+  amount_to_add: 0.02
+  increase_rate: 5
 --- !u!1 &1621612806
 GameObject:
   m_ObjectHideFlags: 0

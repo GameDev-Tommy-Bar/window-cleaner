@@ -9,6 +9,7 @@
 #### [טריילר](https://www.youtube.com/watch?v=_3PH3kVikU0)
 #### משחקים בעזרת מקשי החיצים כדי לזוז
 #### מחליפים את ציוד הניקיון באמצעות המקש TAB
+#### הסבר איך משחקים נמצא בשלב הראשון של המשחק
 #### [שחקו במשחק](https://tommy-bar.itch.io/windows-cleaner)
 #### מסך פתיחה
 ![pic1](https://github.com/GameDev-Tommy-Bar/window-cleaner/blob/f86d52be03ac71434ad937532b02715ca9b7114b/Assets/Pics/main_screen.PNG)
