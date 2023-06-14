@@ -66,10 +66,6 @@ public class cleaning_status : MonoBehaviour
             player_stats.score = score;
             player_stats.current_level_points++;
             scoreText.text = score.ToString();
-            if (!dirty)
-            {
-                StartCoroutine(MakeDirtyAgain());
-            }
         }
     }
 
@@ -108,5 +104,9 @@ public class cleaning_status : MonoBehaviour
         player_stats.windows_cleand++;
         patience_bar.GetComponent<p_bar>().increaseBar(10);
         bubbles.GetComponent<fadeOut>().enabled = false;
+        if (!dirty)
+        {
+            StartCoroutine(MakeDirtyAgain());
+        }
     }
 }
