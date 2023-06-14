@@ -28,6 +28,7 @@ public class cleaning_status : MonoBehaviour
     bool is_mud = true;
     bool is_bubbled = false;
     public bool dirty = true;
+    public float coin_remove_time = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -60,12 +61,7 @@ public class cleaning_status : MonoBehaviour
         }
         if (other.tag == "bag" && coin.GetComponent<SpriteRenderer>().enabled == true)
         {
-            coin.GetComponent<SpriteRenderer>().enabled = false;
-            float score = player_stats.score;
-            score++;
-            player_stats.score = score;
-            player_stats.current_level_points++;
-            scoreText.text = score.ToString();
+            toss_coin(2);
         }
     }
 
@@ -108,5 +104,25 @@ public class cleaning_status : MonoBehaviour
         {
             StartCoroutine(MakeDirtyAgain());
         }
+        StartCoroutine(coin_remove());
+    }
+
+    IEnumerator coin_remove()
+    {
+        yield return new WaitForSeconds(coin_remove_time);
+        if (coin.GetComponent<SpriteRenderer>().enabled == true)
+        {
+            toss_coin(1);
+        }
+    }
+
+    void toss_coin(int amount)
+    {
+        coin.GetComponent<SpriteRenderer>().enabled = false;
+        float score = player_stats.score;
+        score += amount;
+        player_stats.score = score;
+        player_stats.current_level_points++;
+        scoreText.text = score.ToString();
     }
 }
