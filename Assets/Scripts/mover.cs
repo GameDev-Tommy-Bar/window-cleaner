@@ -66,7 +66,6 @@ public class mover : MonoBehaviour
     */
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("triggered " + other.tag);
         if (other.tag == "cable")
         {
             gameObject.GetComponent<Animator>().enabled = false;
@@ -85,10 +84,8 @@ public class mover : MonoBehaviour
     {
         float temp_speed = speed / 2;
         speed = temp_speed;
-        Debug.Log("low speed for 3 seconds, speed is " + speed);
         yield return new WaitForSeconds(slow_time);
         speed *= 2;
-        Debug.Log("return to normal speed, speed is " + speed);
     }
 
     /*

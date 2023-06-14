@@ -28,7 +28,7 @@ public class tutorial : MonoBehaviour
         "Hey new player\nWelcome to your new job\nas window cleaner!\nyour mission is clean\nthe building";
     private string first_hint = "Hurry up!\nClimb the building\nand start cleaning!!";
     private string change_items =
-        "Your tools are:\nMop, Sponge, and Money bag.\nChange them with\n'Tab' key";
+        "Your tools are:\nMop, Sponge, and Money bag.\nChange them with 'Tab' key\nuse the money bag to get\nmore points";
     private string patience_bar =
         "See the patience bar\nat the top left.\nWhen the building is dirty\nthe boss is getting mad!";
     private string drop_cable =

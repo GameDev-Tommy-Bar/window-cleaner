@@ -27,7 +27,6 @@ public class p_bar : MonoBehaviour
     {
         if (enabled)
         {
-            Debug.Log("slide value is " + slider.value);
             slider.value -= decrease_factor;
         }
     }

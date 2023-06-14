@@ -30,7 +30,6 @@ public class update_bar : MonoBehaviour
     {
         StartCoroutine(decrease_bar());
         maxTime = bar.GetComponent<p_bar>().getMaxValue();
-        Debug.Log("maxTIME is " + maxTime);
     }
 
     // Update is called once per frame
@@ -40,8 +39,6 @@ public class update_bar : MonoBehaviour
             window_manager1.GetComponent<all_clean>().all_cleaned
             && window_manager2.GetComponent<all_clean>().all_cleaned
         );
-        //Debug.Log("they dirty? "+dirty );
-        //bar.GetComponent<p_bar>().UpdatePBar(0.1f);
         if (dirty && !coroutineRunning)
         {
             StartCoroutine(decrease_bar());
@@ -59,7 +56,6 @@ public class update_bar : MonoBehaviour
             yield return new WaitForSeconds(time_to_wait);
             float time = DecreaseLifePerSecond(maxTime, patience_time);
             bar.GetComponent<p_bar>().UpdatePBar(time);
-            //Debug.Log("time is "+time);
         }
         coroutineRunning = false;
     }

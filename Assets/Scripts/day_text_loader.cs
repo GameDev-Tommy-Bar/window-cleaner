@@ -23,7 +23,6 @@ public class day_text_loader : MonoBehaviour
         int number = int.Parse(numberString);
         if (player_stats.lockArray[number] == true)
         {
-            Debug.Log("new level unlock " + (number + 1));
             player_stats.lockArray[number] = false;
         }
     }
